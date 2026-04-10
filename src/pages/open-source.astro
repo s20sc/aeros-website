@@ -1,0 +1,324 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Open Source — AEROS" description="AEROS Runtime Core and ECM Package System are open source under Apache 2.0.">
+
+  <section class="section" style="padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="section-label">Open Source</div>
+      <h1 class="page-title">Built in the open</h1>
+      <p class="page-desc">
+        AEROS Runtime Core and ECM Package System are Apache 2.0.
+        Use it, fork it, contribute to it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Repositories ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Repositories</div>
+      <h2 class="section-title">Source code</h2>
+
+      <div class="repo-grid">
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-header">
+            <span class="repo-name">s20sc/aeros-runtime</span>
+            <span class="repo-license">Apache 2.0</span>
+          </div>
+          <p class="repo-desc">Runtime Core + ECM System + MVP demo. The main repository.</p>
+          <div class="repo-tags">
+            <span>Python</span>
+            <span>asyncio</span>
+            <span>runtime</span>
+          </div>
+        </a>
+
+        <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="repo-card">
+          <div class="repo-header">
+            <span class="repo-name">s20sc/aeros-project</span>
+            <span class="repo-license">Research</span>
+          </div>
+          <p class="repo-desc">Academic project page with all 7 papers and research documentation.</p>
+          <div class="repo-tags">
+            <span>Papers</span>
+            <span>arXiv</span>
+          </div>
+        </a>
+
+        <div class="repo-card repo-planned">
+          <div class="repo-header">
+            <span class="repo-name">s20sc/aeros-contracts</span>
+            <span class="repo-license repo-soon">Planned</span>
+          </div>
+          <p class="repo-desc">Contract Engine CLI — validate, test, and manage capability contracts.</p>
+          <div class="repo-tags">
+            <span>CLI</span>
+            <span>contracts</span>
+          </div>
+        </div>
+
+        <div class="repo-card repo-planned">
+          <div class="repo-header">
+            <span class="repo-name">s20sc/aeros-bench</span>
+            <span class="repo-license repo-soon">Planned</span>
+          </div>
+          <p class="repo-desc">EmbodiedGovBench — benchmark suite for governed embodied agent systems.</p>
+          <div class="repo-tags">
+            <span>Benchmark</span>
+            <span>evaluation</span>
+          </div>
+        </div>
+
+        <div class="repo-card repo-planned">
+          <div class="repo-header">
+            <span class="repo-name">s20sc/aeros-ecm-library</span>
+            <span class="repo-license repo-soon">Planned</span>
+          </div>
+          <p class="repo-desc">Official ECM repository — community-contributed capability modules.</p>
+          <div class="repo-tags">
+            <span>ECM</span>
+            <span>community</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Quick Start ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Up and running in 60 seconds</h2>
+
+      <div class="quickstart">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">terminal</span>
+          </div>
+<pre class="terminal-body"><span class="comment"># Install AEROS</span>
+<span class="prompt">$</span> <span class="cmd">pip install aeros</span>
+
+<span class="comment"># Run the demo</span>
+<span class="prompt">$</span> <span class="cmd">aeros demo</span>
+<span class="ok">&#10003; Runtime started on port 8420</span>
+<span class="ok">&#10003; Demo agent: arm-sim-01</span>
+<span class="ok">&#10003; ECM loaded: pick-and-place@1.0</span>
+<span class="ok">&#10003; Governance: sandbox mode</span>
+<span class="out">  Open localhost:8420 for dashboard</span>
+
+<span class="comment"># Or explore the CLI</span>
+<span class="prompt">$</span> <span class="cmd">aeros --help</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Contributing ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Contribute</div>
+      <h2 class="section-title">Ways to get involved</h2>
+
+      <div class="contrib-grid">
+        <div class="contrib-card">
+          <h3>Write an ECM</h3>
+          <p>Build a capability module — navigation, manipulation, perception, or anything else an agent needs.</p>
+        </div>
+        <div class="contrib-card">
+          <h3>Add benchmark scenarios</h3>
+          <p>Contribute test scenarios to EmbodiedGovBench for evaluating governed agent systems.</p>
+        </div>
+        <div class="contrib-card">
+          <h3>Improve documentation</h3>
+          <p>Better docs, tutorials, and examples help everyone. Every PR counts.</p>
+        </div>
+        <div class="contrib-card">
+          <h3>Report issues</h3>
+          <p>Found a bug or have a feature request? Open an issue on GitHub.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Research ═══ -->
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <div class="section-label">Academic Foundation</div>
+      <h2 class="section-title">7 systematic papers</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl);">
+        AEROS is backed by a comprehensive research program covering runtime architecture,
+        governance, evolution, contracts, federation, and benchmarking for embodied agent systems.
+        All papers are publicly available on arXiv.
+      </p>
+      <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-primary">
+        View Research Program
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 480px;
+    line-height: 1.7;
+  }
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Repos ═══ */
+  .repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  .repo-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: border-color var(--duration-short), transform var(--duration-short);
+  }
+  .repo-card:hover {
+    border-color: rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  .repo-planned { opacity: 0.6; }
+  .repo-planned:hover { transform: none; border-color: var(--border); }
+
+  .repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+  }
+  .repo-name {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .repo-license {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+  }
+  .repo-soon {
+    background: rgba(100, 116, 139, 0.1);
+    color: var(--text-muted);
+  }
+  .repo-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: var(--space-md);
+  }
+  .repo-tags {
+    display: flex;
+    gap: var(--space-sm);
+  }
+  .repo-tags span {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+  }
+
+  /* ═══ Terminal ═══ */
+  .quickstart { max-width: 640px; }
+  .terminal {
+    background: #0D1117;
+    border: 1px solid #21262D;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 10px var(--space-md);
+    background: #161B22;
+    border-bottom: 1px solid #21262D;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.red { background: #FF5F57; }
+  .dot.yellow { background: #FEBC2E; }
+  .dot.green { background: #28C840; }
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #8B949E;
+    margin-left: var(--space-sm);
+  }
+  .terminal-body {
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: #C9D1D9;
+    white-space: pre;
+    margin: 0;
+    overflow-x: auto;
+  }
+  .prompt { color: var(--secondary); }
+  .cmd { color: #F0F6FC; }
+  .comment { color: #484F58; }
+  .out { color: #8B949E; }
+  .ok { color: var(--success); }
+
+  /* ═══ Contributing ═══ */
+  .contrib-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+  .contrib-card {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  .contrib-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .contrib-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .repo-grid, .contrib-grid { grid-template-columns: 1fr; }
+  }
+</style>

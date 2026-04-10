@@ -1,0 +1,353 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="落地场景 — AEROS" description="AEROS 运行时用于智能仓储、商业服务机器人和机器人 OEM。" lang="zh">
+
+  <section class="section" style="padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="section-label">落地场景</div>
+      <h1 class="page-title">AEROS 在哪里运行</h1>
+      <p class="page-desc">
+        任何需要具身智能体持续运行、安全进化并对其行为负责的场景。
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 1: Warehousing ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="usecase">
+        <div class="usecase-info">
+          <div class="usecase-tag">智能仓储</div>
+          <h2 class="usecase-title">异构车队，<br>统一运行时</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">痛点</span>
+            <p>20-50 台异构机器人（AMR、协作臂、分拣系统），每台都有自己的软件栈。能力无法在不同形态间迁移。出问题时没有审计链路可追溯。</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS 交付</span>
+            <ul>
+              <li><strong>统一运行时</strong> — 一个生命周期管理器管理整个车队</li>
+              <li><strong>ECM 可移植性</strong> — 能力在不同机器人类型间复用</li>
+              <li><strong>全链路审计</strong> — 每个决策和行动都可追溯</li>
+              <li><strong>受治理的进化</strong> — 新能力通过安全门部署</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">warehouse-east</span>
+              <span class="fleet-status">12 agents &middot; all governed</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">AMR</span>
+                <span class="agent-count">&times;6</span>
+                <span class="agent-ecm">nav, obstacle-avoidance</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Arm</span>
+                <span class="agent-count">&times;4</span>
+                <span class="agent-ecm">pick-place, dual-grasp</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Sorter</span>
+                <span class="agent-count">&times;2</span>
+                <span class="agent-ecm">classify, route</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>Governance: <strong style="color: var(--success)">strict</strong></span>
+              <span>Uptime: 14d 3h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 2: Service Robots ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="usecase usecase--reverse">
+        <div class="usecase-info">
+          <div class="usecase-tag">商业服务</div>
+          <h2 class="usecase-title">长期运行的 Agent，<br>远程治理</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">痛点</span>
+            <p>服务机器人在公共空间 24/7 运行 — 酒店、医院、零售。它们需要组合多种能力、不停机 OTA 更新，以及在法规变化时远程推送策略变更。</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS 交付</span>
+            <ul>
+              <li><strong>ECM 热替换</strong> — 不重启 Agent 即可升级能力</li>
+              <li><strong>远程策略推送</strong> — 即时更改车队的治理规则</li>
+              <li><strong>金丝雀部署</strong> — 先将新能力推送到 5% 的车队</li>
+              <li><strong>即时回滚</strong> — 一秒内回退任何变更</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">hotel-fleet-shenzhen</span>
+              <span class="fleet-status">8 agents &middot; 3 locations</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">Concierge</span>
+                <span class="agent-count">&times;3</span>
+                <span class="agent-ecm">greet, navigate, deliver</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Room Service</span>
+                <span class="agent-count">&times;3</span>
+                <span class="agent-ecm">elevator, deliver, return</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Security</span>
+                <span class="agent-count">&times;2</span>
+                <span class="agent-ecm">patrol, anomaly-detect</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>Policy update: <strong style="color: var(--primary)">2h ago</strong></span>
+              <span>Uptime: 89d</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 3: OEM ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="usecase">
+        <div class="usecase-info">
+          <div class="usecase-tag">机器人 OEM</div>
+          <h2 class="usecase-title">平台化，<br>而非项目制</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">痛点</span>
+            <p>每个客户项目都从零重建运行时。项目间无法复用能力。没有治理原语。集成成本吃掉利润。平台化思维永远无法落地。</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS 交付</span>
+            <ul>
+              <li><strong>标准运行时</strong> — 不再为每个客户重建相同的脚手架</li>
+              <li><strong>ECM 生态</strong> — 构建一次，跨项目和机器人类型部署</li>
+              <li><strong>治理插件</strong> — 企业客户开箱即用获得审计和策略能力</li>
+              <li><strong>更快交付</strong> — 从数月定制集成缩短到数周</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">OEM Platform</span>
+              <span class="fleet-status">reusable across projects</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">Project A</span>
+                <span class="agent-count">Warehouse</span>
+                <span class="agent-ecm">shared: nav, pick-place</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Project B</span>
+                <span class="agent-count">Hospital</span>
+                <span class="agent-ecm">shared: nav, deliver</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Project C</span>
+                <span class="agent-count">Retail</span>
+                <span class="agent-ecm">shared: nav, greet</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>ECMs reused: <strong style="color: var(--success)">12 / 18</strong></span>
+              <span>Dev time: -60%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <h2 class="section-title">了解 AEROS 在你的场景中如何运行</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl);">
+        预约演示，我们将展示 AEROS 如何适配你的车队、硬件和治理需求。
+      </p>
+      <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    line-height: 1.7;
+  }
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Use Case Layout ═══ */
+  .usecase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+  .usecase--reverse .usecase-info { order: 2; }
+  .usecase--reverse .usecase-visual { order: 1; }
+
+  .usecase-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .usecase-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .pain-point, .aeros-value {
+    margin-bottom: var(--space-lg);
+  }
+  .pain-label, .value-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-sm);
+  }
+  .pain-label { color: var(--warning); }
+  .value-label { color: var(--success); }
+
+  .pain-point p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: var(--space-md);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--warning);
+  }
+  .aeros-value ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .aeros-value li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-left: var(--space-md);
+    position: relative;
+  }
+  .aeros-value li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-size: 12px;
+  }
+  .aeros-value strong { color: var(--text-primary); }
+
+  /* ═══ Fleet Diagram ═══ */
+  .fleet-diagram {
+    background: #0D1117;
+    border: 1px solid #21262D;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .fleet-header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    background: #161B22;
+    border-bottom: 1px solid #21262D;
+  }
+  .fleet-name { color: #F0F6FC; font-weight: 500; }
+  .fleet-status { color: #8B949E; font-size: 12px; }
+
+  .fleet-agents {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .fleet-agent {
+    display: grid;
+    grid-template-columns: 100px 50px 1fr;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid #21262D;
+    color: #C9D1D9;
+  }
+  .fleet-agent:last-child { border-bottom: none; }
+  .agent-type { color: #F0F6FC; font-weight: 500; }
+  .agent-count { color: #8B949E; }
+  .agent-ecm { color: #8B949E; font-size: 12px; }
+
+  .fleet-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid #21262D;
+    font-size: 12px;
+    color: #8B949E;
+  }
+
+  @media (max-width: 768px) {
+    .usecase {
+      grid-template-columns: 1fr;
+    }
+    .usecase--reverse .usecase-info,
+    .usecase--reverse .usecase-visual {
+      order: unset;
+    }
+  }
+</style>

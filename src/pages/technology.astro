@@ -1,0 +1,596 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Technology — AEROS" description="AEROS five-layer runtime architecture: from hardware abstraction to governed agent execution.">
+
+  <!-- ═══ Header ═══ -->
+  <section class="section" style="padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="section-label">Technology</div>
+      <h1 class="page-title">Single-Agent Principle</h1>
+      <p class="page-desc">
+        One robot = one persistent agent. Capabilities load through ECM.
+        Behavior is constrained by governance. Not a multi-agent ensemble.
+        Not a model wired directly to hardware.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Architecture Philosophy ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">&Delta;</div>
+          <h3>One Agent Per Robot</h3>
+          <p>Each robot hosts a single persistent agent that maintains continuity of identity, state, and learned experience across its operational lifetime.</p>
+        </div>
+        <div class="philosophy-card">
+          <div class="philosophy-icon">&loz;</div>
+          <h3>Capabilities Are Modules</h3>
+          <p>Agents don't contain capabilities — they load them. ECM packages are installed, versioned, upgraded, and rolled back independently of the agent itself.</p>
+        </div>
+        <div class="philosophy-card">
+          <div class="philosophy-icon">&lambda;</div>
+          <h3>Governance Is Not Optional</h3>
+          <p>Every capability call passes through the governance engine. Safety is architectural, not aspirational. Audit is complete, not sampled.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Five-Layer Architecture (Interactive) ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Architecture</div>
+      <h2 class="section-title">Five-layer runtime stack</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl);">
+        Click each layer to see its responsibilities and key components.
+      </p>
+
+      <div class="arch-interactive">
+        <div class="arch-layers">
+          <button class="arch-btn active" data-layer="agent">
+            <span class="arch-btn-num">5</span>
+            <span class="arch-btn-name">Agent</span>
+          </button>
+          <button class="arch-btn" data-layer="governance">
+            <span class="arch-btn-num">4</span>
+            <span class="arch-btn-name">Governance</span>
+          </button>
+          <button class="arch-btn" data-layer="ecm">
+            <span class="arch-btn-num">3</span>
+            <span class="arch-btn-name">ECM Package</span>
+          </button>
+          <button class="arch-btn" data-layer="runtime">
+            <span class="arch-btn-num">2</span>
+            <span class="arch-btn-name">Runtime</span>
+          </button>
+          <button class="arch-btn" data-layer="embodiment">
+            <span class="arch-btn-num">1</span>
+            <span class="arch-btn-name">Embodiment</span>
+          </button>
+        </div>
+
+        <div class="arch-details">
+          <div class="arch-detail active" id="detail-agent">
+            <h3>Layer 5: Agent</h3>
+            <p class="arch-detail-desc">The application layer where decision-making logic runs. Each agent is a persistent entity with identity, memory, and goals.</p>
+            <div class="arch-detail-grid">
+              <div class="arch-component">
+                <span class="comp-name">Decision Engine</span>
+                <span class="comp-desc">Foundation model integration, planning, reasoning</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">State Manager</span>
+                <span class="comp-desc">Persistent agent state across sessions and restarts</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Goal Tracker</span>
+                <span class="comp-desc">Task decomposition, progress monitoring, replanning</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Experience Memory</span>
+                <span class="comp-desc">Learned behaviors, failure history, adaptation data</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-detail" id="detail-governance">
+            <h3>Layer 4: Governance</h3>
+            <p class="arch-detail-desc">The policy enforcement layer. Every capability invocation is validated against active policies before execution.</p>
+            <div class="arch-detail-grid">
+              <div class="arch-component">
+                <span class="comp-name">Policy Engine</span>
+                <span class="comp-desc">Declarative DSL for defining operational constraints</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Watcher System</span>
+                <span class="comp-desc">Real-time invariant monitoring and violation detection</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Recovery Orchestrator</span>
+                <span class="comp-desc">Four-level structured response: log, alert, intervene, halt</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Audit Recorder</span>
+                <span class="comp-desc">Immutable log of every decision, action, and state change</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-detail" id="detail-ecm">
+            <h3>Layer 3: ECM Package</h3>
+            <p class="arch-detail-desc">The capability layer. Agents load capabilities as versioned, contract-bound modules that can be installed, upgraded, and rolled back.</p>
+            <div class="arch-detail-grid">
+              <div class="arch-component">
+                <span class="comp-name">Contract Registry</span>
+                <span class="comp-desc">Six-dimensional typed interfaces between agents and hardware</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Package Manager</span>
+                <span class="comp-desc">Install, upgrade, rollback with atomic transactions</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Compatibility Checker</span>
+                <span class="comp-desc">Pre-install validation against hardware and policy constraints</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Shadow Executor</span>
+                <span class="comp-desc">Run new capabilities in parallel without affecting production</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-detail" id="detail-runtime">
+            <h3>Layer 2: Runtime</h3>
+            <p class="arch-detail-desc">The execution layer. Manages the agent lifecycle, schedules tasks, runs the sense-decide-act loop, and handles failures.</p>
+            <div class="arch-detail-grid">
+              <div class="arch-component">
+                <span class="comp-name">Lifecycle Manager</span>
+                <span class="comp-desc">Init, start, pause, resume, stop, restart state machine</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Task Scheduler</span>
+                <span class="comp-desc">Priority-aware scheduling with preemption and deadlines</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Execution Loop</span>
+                <span class="comp-desc">Closed-loop sense-decide-act with timeout protection</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Fault Handler</span>
+                <span class="comp-desc">Retry, fallback, degrade, halt — structured recovery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arch-detail" id="detail-embodiment">
+            <h3>Layer 1: Embodiment</h3>
+            <p class="arch-detail-desc">The hardware abstraction layer. Normalizes heterogeneous sensors, actuators, and compute into a uniform interface.</p>
+            <div class="arch-detail-grid">
+              <div class="arch-component">
+                <span class="comp-name">Sensor Abstraction</span>
+                <span class="comp-desc">Cameras, LiDAR, IMU, force/torque — unified data format</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Actuator Interface</span>
+                <span class="comp-desc">Arms, wheels, grippers, legs — normalized control API</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Resource Monitor</span>
+                <span class="comp-desc">CPU, GPU, memory, battery — real-time resource tracking</span>
+              </div>
+              <div class="arch-component">
+                <span class="comp-name">Hardware Registry</span>
+                <span class="comp-desc">Capability discovery and device enumeration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ROS 2 Relationship ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Positioning</div>
+      <h2 class="section-title">AEROS and ROS 2</h2>
+
+      <div class="ros-layout">
+        <div class="ros-diagram">
+          <div class="ros-layer ros-aeros">
+            <span>AEROS</span>
+            <span class="ros-tag">Agent Runtime + Governance</span>
+          </div>
+          <div class="ros-arrow">&darr; runs on top of &darr;</div>
+          <div class="ros-layer ros-ros2">
+            <span>ROS 2</span>
+            <span class="ros-tag">Communication Middleware</span>
+          </div>
+          <div class="ros-arrow">&darr; runs on top of &darr;</div>
+          <div class="ros-layer ros-os">
+            <span>Linux / RTOS</span>
+            <span class="ros-tag">Operating System</span>
+          </div>
+        </div>
+
+        <div class="ros-text">
+          <h3>Different layer, different concern</h3>
+          <p>
+            ROS 2 is communication middleware — it handles message passing between nodes.
+            AEROS sits above ROS 2 and manages how agents are <em>run</em> and <em>governed</em>.
+          </p>
+          <p>
+            The analogy: <strong>Linux is to Kubernetes</strong> as <strong>ROS 2 is to AEROS</strong>.
+            Kubernetes isn't a Linux plugin — it's a different abstraction layer solving a different problem.
+            AEROS isn't a ROS 2 plugin either.
+          </p>
+          <div class="ros-comparison">
+            <div>
+              <span class="ros-comp-label">ROS 2 manages</span>
+              <span class="ros-comp-value">Topics, services, actions, nodes, DDS transport</span>
+            </div>
+            <div>
+              <span class="ros-comp-label">AEROS manages</span>
+              <span class="ros-comp-value">Agent lifecycle, ECM packages, governance policies, audit trails</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Open-Core Model ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Business Model</div>
+      <h2 class="section-title">Open-core architecture</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl);">
+        Core runtime is open source. Enterprise governance is commercial.
+      </p>
+
+      <div class="core-stack">
+        <div class="core-layer core-commercial">
+          <div class="core-left">
+            <span class="core-name">Governance Console</span>
+            <span class="core-desc">Policy DSL, watchers, audit, recovery orchestration</span>
+          </div>
+          <span class="core-license">Enterprise License</span>
+        </div>
+        <div class="core-layer core-open">
+          <div class="core-left">
+            <span class="core-name">ECM Package System</span>
+            <span class="core-desc">Standard format, contracts, versioning, compatibility</span>
+          </div>
+          <span class="core-license license-open">Apache 2.0</span>
+        </div>
+        <div class="core-layer core-open">
+          <div class="core-left">
+            <span class="core-name">Runtime Core</span>
+            <span class="core-desc">Lifecycle, scheduling, execution loop, fault recovery</span>
+          </div>
+          <span class="core-license license-open">Apache 2.0</span>
+        </div>
+      </div>
+
+      <div class="core-rationale">
+        <p><strong>Open core attracts developers.</strong> Governance generates enterprise revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <h2 class="section-title">Read the research</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl);">
+        Seven systematic papers cover the architecture, governance, evolution, contracts, federation, and benchmarking behind AEROS.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-primary">View Research Program</a>
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-secondary">View Source &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script is:inline>
+  document.querySelectorAll('.arch-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.arch-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.arch-detail').forEach(d => d.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('detail-' + btn.dataset.layer).classList.add('active');
+    });
+  });
+</script>
+
+<style>
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Philosophy ═══ */
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+  .philosophy-card {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  .philosophy-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .philosophy-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .philosophy-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ═══ Interactive Arch ═══ */
+  .arch-interactive {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-xl);
+    min-height: 400px;
+  }
+  .arch-layers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .arch-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--duration-short);
+    text-align: left;
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+  }
+  .arch-btn:hover {
+    border-color: var(--primary);
+    color: var(--text-primary);
+  }
+  .arch-btn.active {
+    border-color: var(--primary);
+    background: rgba(0, 102, 255, 0.05);
+    color: var(--text-primary);
+  }
+  .arch-btn-num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+  }
+  .arch-btn.active .arch-btn-num {
+    background: var(--primary);
+    color: white;
+  }
+  .arch-btn-name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .arch-detail {
+    display: none;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  .arch-detail.active { display: block; }
+  .arch-detail h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .arch-detail-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+    max-width: 560px;
+  }
+  .arch-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  .arch-component {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-md);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+  }
+  .comp-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .comp-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ═══ ROS Layout ═══ */
+  .ros-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+  .ros-diagram {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  .ros-layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+  }
+  .ros-aeros { border-color: rgba(0, 102, 255, 0.3); background: rgba(0, 102, 255, 0.05); }
+  .ros-tag {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+  .ros-arrow {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    padding: var(--space-sm) 0;
+  }
+  .ros-text h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .ros-text p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+    font-size: 15px;
+  }
+  .ros-text em { font-family: var(--font-display); font-style: normal; color: var(--primary); font-weight: 600; }
+  .ros-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+  .ros-comparison > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-md);
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+  }
+  .ros-comp-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+  .ros-comp-value { font-size: 14px; color: var(--text-secondary); }
+
+  /* ═══ Open Core ═══ */
+  .core-stack {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .core-layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+  }
+  .core-commercial { border-color: rgba(0, 194, 168, 0.3); }
+  .core-left { display: flex; flex-direction: column; gap: 2px; }
+  .core-name { font-weight: 600; font-size: 15px; color: var(--text-primary); }
+  .core-desc { font-size: 13px; color: var(--text-muted); }
+  .core-license {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 194, 168, 0.1);
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+  .license-open {
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+  }
+  .core-rationale {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .core-rationale p { font-size: 14px; color: var(--text-secondary); }
+  .core-rationale strong { color: var(--text-primary); }
+
+  @media (max-width: 768px) {
+    .philosophy-grid { grid-template-columns: 1fr; }
+    .arch-interactive { grid-template-columns: 1fr; }
+    .arch-detail-grid { grid-template-columns: 1fr; }
+    .ros-layout { grid-template-columns: 1fr; }
+  }
+</style>

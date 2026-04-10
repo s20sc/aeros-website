@@ -1,0 +1,354 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Use Cases — AEROS" description="AEROS runtime for smart warehousing, commercial service robots, and robot OEMs.">
+
+  <section class="section" style="padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="section-label">Use Cases</div>
+      <h1 class="page-title">Where AEROS runs</h1>
+      <p class="page-desc">
+        Any scenario with embodied agents that need to run continuously,
+        evolve safely, and be accountable for their actions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 1: Warehousing ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="usecase">
+        <div class="usecase-info">
+          <div class="usecase-tag">Smart Warehousing</div>
+          <h2 class="usecase-title">Heterogeneous fleet,<br>unified runtime</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">The pain</span>
+            <p>20-50 heterogeneous robots (AMRs, collaborative arms, sorting systems), each with its own software stack. Capabilities don't transfer across morphologies. When something goes wrong, there's no audit trail to trace what happened.</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS delivers</span>
+            <ul>
+              <li><strong>Unified runtime</strong> — one lifecycle manager for the entire fleet</li>
+              <li><strong>ECM portability</strong> — capabilities reuse across robot types</li>
+              <li><strong>Full-chain audit</strong> — every decision and action is traceable</li>
+              <li><strong>Governed evolution</strong> — new capabilities deploy through safety gates</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">warehouse-east</span>
+              <span class="fleet-status">12 agents &middot; all governed</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">AMR</span>
+                <span class="agent-count">&times;6</span>
+                <span class="agent-ecm">nav, obstacle-avoidance</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Arm</span>
+                <span class="agent-count">&times;4</span>
+                <span class="agent-ecm">pick-place, dual-grasp</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Sorter</span>
+                <span class="agent-count">&times;2</span>
+                <span class="agent-ecm">classify, route</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>Governance: <strong style="color: var(--success)">strict</strong></span>
+              <span>Uptime: 14d 3h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 2: Service Robots ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="usecase usecase--reverse">
+        <div class="usecase-info">
+          <div class="usecase-tag">Commercial Service</div>
+          <h2 class="usecase-title">Long-running agents,<br>remote governance</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">The pain</span>
+            <p>Service robots run 24/7 in public spaces — hotels, hospitals, retail. They need multiple capabilities composed together, OTA updates without downtime, and remote policy changes when regulations change.</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS delivers</span>
+            <ul>
+              <li><strong>ECM hot-swap</strong> — upgrade capabilities without restarting the agent</li>
+              <li><strong>Remote policy push</strong> — change governance rules across the fleet instantly</li>
+              <li><strong>Canary deployment</strong> — roll out new capabilities to 5% of the fleet first</li>
+              <li><strong>Instant rollback</strong> — revert any change in under a second</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">hotel-fleet-shenzhen</span>
+              <span class="fleet-status">8 agents &middot; 3 locations</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">Concierge</span>
+                <span class="agent-count">&times;3</span>
+                <span class="agent-ecm">greet, navigate, deliver</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Room Service</span>
+                <span class="agent-count">&times;3</span>
+                <span class="agent-ecm">elevator, deliver, return</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Security</span>
+                <span class="agent-count">&times;2</span>
+                <span class="agent-ecm">patrol, anomaly-detect</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>Policy update: <strong style="color: var(--primary)">2h ago</strong></span>
+              <span>Uptime: 89d</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 3: OEM ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="usecase">
+        <div class="usecase-info">
+          <div class="usecase-tag">Robot OEM</div>
+          <h2 class="usecase-title">Platform, not project</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">The pain</span>
+            <p>Every customer project rebuilds the runtime from scratch. No capability reuse across projects. No governance primitives. Integration costs eat margins. Platform thinking never materializes.</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS delivers</span>
+            <ul>
+              <li><strong>Standard runtime</strong> — stop rebuilding the same scaffolding for every customer</li>
+              <li><strong>ECM ecosystem</strong> — build once, deploy across projects and robot types</li>
+              <li><strong>Governance plug-in</strong> — enterprise customers get audit and policy out of the box</li>
+              <li><strong>Faster time-to-deploy</strong> — from months of custom integration to weeks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">OEM Platform</span>
+              <span class="fleet-status">reusable across projects</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">Project A</span>
+                <span class="agent-count">Warehouse</span>
+                <span class="agent-ecm">shared: nav, pick-place</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Project B</span>
+                <span class="agent-count">Hospital</span>
+                <span class="agent-ecm">shared: nav, deliver</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Project C</span>
+                <span class="agent-count">Retail</span>
+                <span class="agent-ecm">shared: nav, greet</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>ECMs reused: <strong style="color: var(--success)">12 / 18</strong></span>
+              <span>Dev time: -60%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <h2 class="section-title">See AEROS in your scenario</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl);">
+        Book a demo and we'll show you how AEROS maps to your specific fleet, hardware, and governance requirements.
+      </p>
+      <a href="/contact" class="btn btn-primary">Book a Demo</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    line-height: 1.7;
+  }
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Use Case Layout ═══ */
+  .usecase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+  .usecase--reverse .usecase-info { order: 2; }
+  .usecase--reverse .usecase-visual { order: 1; }
+
+  .usecase-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .usecase-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .pain-point, .aeros-value {
+    margin-bottom: var(--space-lg);
+  }
+  .pain-label, .value-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-sm);
+  }
+  .pain-label { color: var(--warning); }
+  .value-label { color: var(--success); }
+
+  .pain-point p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: var(--space-md);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--warning);
+  }
+  .aeros-value ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .aeros-value li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-left: var(--space-md);
+    position: relative;
+  }
+  .aeros-value li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-size: 12px;
+  }
+  .aeros-value strong { color: var(--text-primary); }
+
+  /* ═══ Fleet Diagram ═══ */
+  .fleet-diagram {
+    background: #0D1117;
+    border: 1px solid #21262D;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  .fleet-header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    background: #161B22;
+    border-bottom: 1px solid #21262D;
+  }
+  .fleet-name { color: #F0F6FC; font-weight: 500; }
+  .fleet-status { color: #8B949E; font-size: 12px; }
+
+  .fleet-agents {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .fleet-agent {
+    display: grid;
+    grid-template-columns: 100px 50px 1fr;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid #21262D;
+    color: #C9D1D9;
+  }
+  .fleet-agent:last-child { border-bottom: none; }
+  .agent-type { color: #F0F6FC; font-weight: 500; }
+  .agent-count { color: #8B949E; }
+  .agent-ecm { color: #8B949E; font-size: 12px; }
+
+  .fleet-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid #21262D;
+    font-size: 12px;
+    color: #8B949E;
+  }
+
+  @media (max-width: 768px) {
+    .usecase {
+      grid-template-columns: 1fr;
+    }
+    .usecase--reverse .usecase-info,
+    .usecase--reverse .usecase-visual {
+      order: unset;
+    }
+  }
+</style>

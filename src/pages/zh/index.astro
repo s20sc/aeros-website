@@ -1,0 +1,671 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="AEROS — 具身智能体的运行时" lang="zh">
+
+  <!-- ═══ Section 1: Hero ═══ -->
+  <section class="hero grid-bg">
+    <div class="container hero-content">
+      <h1 class="hero-h1">
+        <em>具身智能体</em>的<br>运行时
+      </h1>
+      <p class="hero-sub">
+        一个机器人，一个 Agent，一个 Runtime。<br>
+        为具身智能体构建可运行、可治理、可进化的基础设施。
+      </p>
+      <div class="hero-ctas">
+        <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-secondary">
+          在 GitHub 上查看 <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+      <p class="hero-badge">开源运行时核心 &middot; Apache 2.0</p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 2: Problem Statement ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">行业缺口</div>
+      <h2 class="section-title">模型能思考，机器人能运动，<br>但智能体还跑不起来。</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl)">
+        缺的是运行时层：让具身智能体在真实世界中稳定运行、安全执行、持续进化的基础设施。
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">&#x1D6CC;</div>
+          <h3>模型已经准备好面对物理世界</h3>
+          <p>基础模型已经能推理动作、物体和环境 — 但光有推理能力，不等于智能体能真正运行。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#x25C7;</div>
+          <h3>机器人硬件日益异构化</h3>
+          <p>人形、四足、AMR、协作臂都在规模化 — 对共享运行时层的需求越来越迫切。</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#x25B3;</div>
+          <h3>真实部署改变了需求</h3>
+          <p>一旦智能体走出实验室，可靠性、故障恢复、安全性和治理就成为系统级需求。</p>
+        </div>
+      </div>
+
+      <div class="problem-conclusion">
+        <p>真正缺失的是让智能体<strong>可运行、可治理、可规模化</strong>的运行时。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 3: Three Core Capabilities ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">核心能力</div>
+      <h2 class="section-title">三层运行时基础设施</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl)">
+        AEROS 不是一个工具 — 它是一个治理具身智能体全生命周期的运行时平台。
+      </p>
+
+      <div class="capability-grid">
+        <a href="/zh/product" class="capability-card">
+          <div class="capability-tag">Apache 2.0</div>
+          <h3>Agent 运行时</h3>
+          <ul>
+            <li>生命周期管理</li>
+            <li>状态持久化</li>
+            <li>任务调度</li>
+            <li>执行循环</li>
+            <li>故障恢复</li>
+            <li>分布式追踪</li>
+          </ul>
+          <span class="capability-link">了解更多 &rarr;</span>
+        </a>
+
+        <a href="/zh/product#ecm" class="capability-card">
+          <div class="capability-tag">Apache 2.0</div>
+          <h3>ECM 包管理系统</h3>
+          <ul>
+            <li>标准 ECM 格式</li>
+            <li>安装 / 升级 / 回滚</li>
+            <li>语义版本控制</li>
+            <li>六维能力契约</li>
+            <li>兼容性检查</li>
+            <li>影子模式部署</li>
+          </ul>
+          <span class="capability-link">了解更多 &rarr;</span>
+        </a>
+
+        <a href="/zh/product#governance" class="capability-card capability-card--commercial">
+          <div class="capability-tag tag-commercial">企业版</div>
+          <h3>治理控制台</h3>
+          <ul>
+            <li>策略 DSL</li>
+            <li>监控器引擎</li>
+            <li>结构化恢复</li>
+            <li>完整审计链路</li>
+            <li>冲突检测</li>
+            <li>版本回滚</li>
+          </ul>
+          <span class="capability-link">了解更多 &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 4: Differentiation ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">定位</div>
+      <h2 class="section-title">不是另一个机器人操作系统</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl)">
+        ROS 2 管理通信。AEROS 管理智能体如何运行和被治理。<br>
+        就像 Kubernetes 之于 Linux — 不同的层，不同的关注点。
+      </p>
+
+      <div class="comparison-table">
+        <div class="comparison-header">
+          <span>传统机器人操作系统</span>
+          <span>AEROS</span>
+        </div>
+        <div class="comparison-row">
+          <span>管理设备通信</span>
+          <span>管理智能体执行</span>
+        </div>
+        <div class="comparison-row">
+          <span>节点 + 消息</span>
+          <span>Agent + ECM + 策略</span>
+        </div>
+        <div class="comparison-row">
+          <span>一次部署</span>
+          <span>持续运行 + 进化</span>
+        </div>
+        <div class="comparison-row">
+          <span>无审计链路</span>
+          <span>全链路可追溯</span>
+        </div>
+        <div class="comparison-row">
+          <span>静态能力</span>
+          <span>可治理的能力进化</span>
+        </div>
+      </div>
+
+      <p class="comparison-footnote">
+        ROS 2 处理通信。AEROS 处理智能体如何被<em>运行</em>和<em>治理</em>。<br>
+        Kubernetes 不是 Linux 插件。AEROS 也不是 ROS 2 插件。
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 5: Architecture ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">架构</div>
+      <h2 class="section-title">五层运行时架构</h2>
+
+      <div class="arch-layout">
+        <div class="arch-stack">
+          <div class="arch-layer">
+            <span class="arch-name">第 5 层：Agent</span>
+            <span class="arch-desc">应用逻辑与决策</span>
+          </div>
+          <div class="arch-arrow">&darr;</div>
+          <div class="arch-layer arch-governance">
+            <span class="arch-name">第 4 层：治理</span>
+            <span class="arch-desc">策略执行与审计</span>
+          </div>
+          <div class="arch-arrow">&darr;</div>
+          <div class="arch-layer">
+            <span class="arch-name">第 3 层：ECM 包</span>
+            <span class="arch-desc">能力模块与契约</span>
+          </div>
+          <div class="arch-arrow">&darr;</div>
+          <div class="arch-layer">
+            <span class="arch-name">第 2 层：运行时</span>
+            <span class="arch-desc">生命周期、调度、执行</span>
+          </div>
+          <div class="arch-arrow">&darr;</div>
+          <div class="arch-layer">
+            <span class="arch-name">第 1 层：具身层</span>
+            <span class="arch-desc">硬件抽象与传感器</span>
+          </div>
+        </div>
+
+        <div class="arch-text">
+          <h3>治理作为<br><em>一等原语</em></h3>
+          <p>
+            传统机器人中间件将治理视为事后补丁 — 部署之后才加上的监控层。
+            AEROS 让治理成为运行时原语。每一次能力调用在到达硬件之前都会经过治理引擎。
+          </p>
+          <p>
+            结果：智能体在架构层面就是安全的，而非靠希望。
+            能力进化是可控的，而非混乱的。
+            审计链路是完整的，而非采样的。
+          </p>
+          <a href="/zh/technology" class="btn btn-secondary">
+            阅读架构详情 <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 6: Trust Signals ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">研究基础</div>
+      <h2 class="section-title">系统性的学术基础</h2>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-number">7</div>
+          <div class="trust-label">篇论文</div>
+          <div class="trust-desc">系统性研究计划，涵盖运行时、治理、进化、契约、联邦化和基准测试</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-number">4</div>
+          <div class="trust-label">篇 arXiv 预印本</div>
+          <div class="trust-desc">公开可用，接受同行评审和学术审查</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-number">1</div>
+          <div class="trust-label">个开源 MVP</div>
+          <div class="trust-desc">运行时核心以 Apache 2.0 许可证开源</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-xl)">
+        <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-secondary">
+          查看研究计划 <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 7: CTA ═══ -->
+  <section class="cta-section grid-bg">
+    <div class="container" style="text-align: center">
+      <h2 class="cta-title">准备好让你的<br>机器人系统<em>可治理</em>了吗？</h2>
+      <p class="cta-desc">了解 AEROS 如何为你的具身智能体带来治理、进化和安全能力。</p>
+      <div class="cta-buttons">
+        <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>
+        <a href="/zh/open-source" class="btn btn-secondary">阅读文档</a>
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-ghost">
+          加入社区 <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ═══ Hero ═══ */
+  .hero {
+    padding: 140px 0 120px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,102,255,0.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 2; }
+
+  .hero-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+  }
+  .hero-h1 em {
+    font-style: normal;
+    color: var(--primary);
+  }
+
+  .hero-sub {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto var(--space-2xl);
+    line-height: 1.7;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .hero-badge {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+
+  .arrow { margin-left: 4px; }
+
+  /* ═══ Problem Statement ═══ */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .problem-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .problem-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .problem-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+
+  .problem-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .problem-conclusion {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+  }
+
+  .problem-conclusion p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .problem-conclusion strong { color: var(--text-primary); }
+
+  /* ═══ Section Alt Background ═══ */
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Capabilities ═══ */
+  .capability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .capability-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: border-color var(--duration-short), transform var(--duration-short);
+  }
+  .capability-card:hover {
+    border-color: rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  .capability-card--commercial {
+    border-color: rgba(0, 194, 168, 0.2);
+  }
+  .capability-card--commercial:hover {
+    border-color: rgba(0, 194, 168, 0.4);
+  }
+
+  .capability-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+    width: fit-content;
+    margin-bottom: var(--space-md);
+  }
+  .tag-commercial {
+    background: rgba(0, 194, 168, 0.1);
+    color: var(--secondary);
+  }
+
+  .capability-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+  }
+
+  .capability-card ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .capability-card li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding-left: var(--space-md);
+    position: relative;
+  }
+  .capability-card li::before {
+    content: '\00B7';
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+  }
+
+  .capability-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary);
+  }
+
+  /* ═══ Comparison Table ═══ */
+  .comparison-table {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .comparison-header span {
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+  .comparison-header span:last-child {
+    color: var(--primary);
+    border-left: 1px solid var(--border);
+  }
+
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .comparison-row:last-child { border-bottom: none; }
+
+  .comparison-row span {
+    padding: var(--space-md) var(--space-lg);
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+  .comparison-row span:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+    border-left: 1px solid var(--border-subtle);
+    background: rgba(0, 102, 255, 0.02);
+  }
+
+  .comparison-footnote {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .comparison-footnote em {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+
+  /* ═══ Architecture ═══ */
+  .arch-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+
+  .arch-stack {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .arch-layer {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arch-governance {
+    border-color: rgba(0, 194, 168, 0.3);
+    background: rgba(0, 194, 168, 0.05);
+  }
+
+  .arch-name {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .arch-desc {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .arch-arrow {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 10px;
+    padding: var(--space-xs) 0;
+    font-family: var(--font-mono);
+  }
+
+  .arch-text h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+  }
+  .arch-text em {
+    font-style: normal;
+    color: var(--primary);
+  }
+  .arch-text p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+    font-size: 15px;
+  }
+
+  /* ═══ Trust Signals ═══ */
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .trust-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+
+  .trust-number {
+    font-family: var(--font-mono);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+  }
+
+  .trust-label {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .trust-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ═══ CTA Section ═══ */
+  .cta-section {
+    padding: var(--space-4xl) 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,102,255,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    line-height: 1.15;
+    position: relative;
+  }
+  .cta-title em {
+    font-style: normal;
+    color: var(--primary);
+  }
+
+  .cta-desc {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xl);
+    position: relative;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* ═══ Responsive ═══ */
+  @media (max-width: 768px) {
+    .hero { padding: 100px 0 80px; }
+    .problem-grid,
+    .capability-grid,
+    .trust-grid { grid-template-columns: 1fr; }
+    .arch-layout { grid-template-columns: 1fr; }
+    .comparison-header span,
+    .comparison-row span { padding: var(--space-sm) var(--space-md); font-size: 13px; }
+  }
+</style>

@@ -1,0 +1,509 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="产品 — AEROS" description="AEROS 提供三层运行时基础设施：Agent 运行时、ECM 包管理系统和治理控制台。" lang="zh">
+
+  <!-- ═══ Section 1: Product Positioning ═══ -->
+  <section class="product-hero section">
+    <div class="container">
+      <div class="section-label">产品</div>
+      <h1 class="page-title">不是工具。<br>是运行时平台。</h1>
+      <p class="page-desc">
+        我们不提供你引入的库。我们交付的是让具身智能体可运行、可治理、可进化的基础设施层。
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 2: Runtime Core ═══ -->
+  <section class="section section-alt" id="runtime">
+    <div class="container">
+      <div class="product-detail">
+        <div class="product-info">
+          <div class="product-badge">Apache 2.0</div>
+          <h2 class="product-name">Agent 运行时核心</h2>
+          <p class="product-problem">
+            <strong>问题：</strong>如何让具身智能体在真实世界中持续、稳定、可恢复地运行？
+          </p>
+          <ul class="product-features">
+            <li>
+              <span class="feature-name">生命周期管理</span>
+              <span class="feature-desc">初始化、启动、暂停、恢复、停止、重启 — 完整的 Agent 状态机</span>
+            </li>
+            <li>
+              <span class="feature-name">状态持久化</span>
+              <span class="feature-desc">Agent 状态在崩溃、重启和迁移后依然存在</span>
+            </li>
+            <li>
+              <span class="feature-name">任务调度</span>
+              <span class="feature-desc">优先级感知的调度，支持抢占和截止时间保证</span>
+            </li>
+            <li>
+              <span class="feature-name">执行循环</span>
+              <span class="feature-desc">感知-决策-执行闭环，带超时保护</span>
+            </li>
+            <li>
+              <span class="feature-name">故障恢复</span>
+              <span class="feature-desc">四级结构化恢复：重试、降级、回退、停机</span>
+            </li>
+            <li>
+              <span class="feature-name">分布式追踪</span>
+              <span class="feature-desc">原生 OpenTelemetry 追踪，覆盖完整执行链路</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">runtime status</span>
+            </div>
+<pre class="terminal-body"><span class="prompt">$</span> <span class="cmd">aeros runtime status</span>
+
+<span class="dim">AGENT    STATE      UPTIME   TASKS</span>
+<span class="out">arm-01   </span><span class="ok">running</span><span class="out">    14d 3h   1,247</span>
+<span class="out">nav-03   </span><span class="ok">running</span><span class="out">    14d 3h     892</span>
+<span class="out">vis-07   </span><span class="warn">degraded</span><span class="out">   14d 3h     756</span>
+
+<span class="prompt">$</span> <span class="cmd">aeros runtime recover vis-07</span>
+<span class="ok">&#10003; Fallback: object-detect v1.3</span>
+<span class="ok">&#10003; vis-07 recovered in 240ms</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 3: ECM Package System ═══ -->
+  <section class="section" id="ecm">
+    <div class="container">
+      <div class="product-detail product-detail--reverse">
+        <div class="product-info">
+          <div class="product-badge">Apache 2.0</div>
+          <h2 class="product-name">ECM 包管理系统</h2>
+          <p class="product-problem">
+            <strong>问题：</strong>如何标准化、版本化并安全升级具身智能体的能力？
+          </p>
+          <ul class="product-features">
+            <li>
+              <span class="feature-name">ECM 标准格式</span>
+              <span class="feature-desc">声明式能力模块，包含元数据、依赖和契约</span>
+            </li>
+            <li>
+              <span class="feature-name">安装 / 升级 / 回滚</span>
+              <span class="feature-desc">包操作支持原子事务和即时回滚</span>
+            </li>
+            <li>
+              <span class="feature-name">语义版本控制</span>
+              <span class="feature-desc">在契约层面追踪破坏性与非破坏性变更</span>
+            </li>
+            <li>
+              <span class="feature-name">六维能力契约</span>
+              <span class="feature-desc">感知、认知、行动、安全、资源、接口约束</span>
+            </li>
+            <li>
+              <span class="feature-name">兼容性检查</span>
+              <span class="feature-desc">安装前针对硬件、运行时和策略约束进行验证</span>
+            </li>
+            <li>
+              <span class="feature-name">影子模式</span>
+              <span class="feature-desc">新能力并行运行，不影响生产行为</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">ecm operations</span>
+            </div>
+<pre class="terminal-body"><span class="prompt">$</span> <span class="cmd">aeros ecm install dual-grasp@2.1</span>
+<span class="dim"># Checking contracts...</span>
+<span class="ok">&#10003; Perception: stereo-cam v3+  OK</span>
+<span class="ok">&#10003; Action: force-feedback v2+  OK</span>
+<span class="ok">&#10003; Safety: max-force 50N      OK</span>
+<span class="ok">&#10003; Resource: GPU mem 2GB      OK</span>
+
+<span class="ok">&#10003; ECM dual-grasp@2.1 installed</span>
+
+<span class="prompt">$</span> <span class="cmd">aeros ecm shadow dual-grasp@2.1</span>
+<span class="ok">&#10003; Shadow mode active...</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 4: Governance Console ═══ -->
+  <section class="section section-alt" id="governance">
+    <div class="container">
+      <div class="product-detail">
+        <div class="product-info">
+          <div class="product-badge badge-commercial">企业版</div>
+          <h2 class="product-name">治理控制台</h2>
+          <p class="product-problem">
+            <strong>问题：</strong>如何对在真实世界中运行的智能体实施约束、审计行为并保持控制？
+          </p>
+          <ul class="product-features">
+            <li>
+              <span class="feature-name">策略 DSL</span>
+              <span class="feature-desc">声明式策略语言，定义智能体能做和不能做什么</span>
+            </li>
+            <li>
+              <span class="feature-name">监控器引擎</span>
+              <span class="feature-desc">实时监控，支持可配置触发器和升级规则</span>
+            </li>
+            <li>
+              <span class="feature-name">结构化恢复</span>
+              <span class="feature-desc">四级编排恢复：记录、告警、干预、停机</span>
+            </li>
+            <li>
+              <span class="feature-name">完整审计链路</span>
+              <span class="feature-desc">每个决策、行动和状态变更均被记录且可查询</span>
+            </li>
+            <li>
+              <span class="feature-name">冲突检测</span>
+              <span class="feature-desc">自动检测并解决策略冲突和覆盖缺口</span>
+            </li>
+            <li>
+              <span class="feature-name">版本回滚</span>
+              <span class="feature-desc">将任何策略、能力或 Agent 配置回滚到任意历史状态</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">governance console</span>
+            </div>
+<pre class="terminal-body"><span class="prompt">$</span> <span class="cmd">aeros gov policy list --active</span>
+
+<span class="dim">POLICY            SCOPE    STATUS</span>
+<span class="out">max-force-50N     fleet    </span><span class="ok">active</span>
+<span class="out">workspace-bounds  fleet    </span><span class="ok">active</span>
+<span class="out">night-mode        zone-A   </span><span class="ok">active</span>
+<span class="out">human-proximity   global   </span><span class="ok">active</span>
+
+<span class="prompt">$</span> <span class="cmd">aeros gov audit --last 24h</span>
+<span class="out">Events: 1,247 | Violations: 0</span>
+<span class="ok">&#10003; All actions within policy</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 5: Roadmap ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">路线图</div>
+      <h2 class="section-title">产品时间线</h2>
+
+      <div class="roadmap">
+        <div class="roadmap-item roadmap-done">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 1</div>
+            <h3>运行时核心</h3>
+            <p>Agent 生命周期、状态、调度、执行、恢复、追踪</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-done">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 2</div>
+            <h3>ECM 包管理系统</h3>
+            <p>标准格式、契约、版本控制、安装/升级、影子模式</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-active">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 3</div>
+            <h3>治理引擎</h3>
+            <p>策略 DSL、监控器、结构化恢复、审计、冲突检测</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 4</div>
+            <h3>跨具身化</h3>
+            <p>ECM 在不同机器人形态和硬件平台间的可移植性</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 5</div>
+            <h3>生态系统</h3>
+            <p>ECM 市场、社区贡献、合作伙伴集成</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <h2 class="section-title">体验 AEROS</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl)">
+        预约一次技术演示，了解运行时、ECM 系统和治理控制台。
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-secondary">
+          查看源码 <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ═══ Page Header ═══ */
+  .product-hero {
+    padding-top: 48px;
+    padding-bottom: var(--space-2xl);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  /* ═══ Product Detail Layout ═══ */
+  .product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+  .product-detail--reverse .product-info {
+    order: 2;
+  }
+  .product-detail--reverse .product-visual {
+    order: 1;
+  }
+
+  .product-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .badge-commercial {
+    background: rgba(0, 194, 168, 0.1);
+    color: var(--secondary);
+  }
+
+  .product-name {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.01em;
+  }
+
+  .product-problem {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+    padding: var(--space-md);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary);
+  }
+  .product-problem strong {
+    color: var(--text-primary);
+  }
+
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .product-features li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .product-features li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .feature-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .feature-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ═══ Terminal ═══ */
+  .product-visual {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .product-info {
+    min-width: 0;
+  }
+  .terminal {
+    background: #0D1117;
+    border: 1px solid #21262D;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 10px var(--space-md);
+    background: #161B22;
+    border-bottom: 1px solid #21262D;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.red { background: #FF5F57; }
+  .dot.yellow { background: #FEBC2E; }
+  .dot.green { background: #28C840; }
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #8B949E;
+    margin-left: var(--space-sm);
+  }
+  .terminal-body {
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: #C9D1D9;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 0;
+  }
+  .prompt { color: var(--secondary); }
+  .cmd { color: #F0F6FC; }
+  .dim { color: #484F58; }
+  .out { color: #8B949E; }
+  .ok { color: var(--success); }
+  .warn { color: var(--warning); }
+
+  /* ═══ Section Alt ═══ */
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Roadmap ═══ */
+  .roadmap {
+    max-width: 640px;
+    position: relative;
+    padding-left: var(--space-xl);
+  }
+  .roadmap::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .roadmap-item {
+    position: relative;
+    padding-bottom: var(--space-xl);
+  }
+  .roadmap-item:last-child { padding-bottom: 0; }
+
+  .roadmap-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-xl) + 2px);
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bg-base);
+    border: 2px solid var(--border);
+  }
+  .roadmap-done .roadmap-marker {
+    background: var(--success);
+    border-color: var(--success);
+  }
+  .roadmap-active .roadmap-marker {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.2);
+  }
+
+  .roadmap-phase {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-xs);
+  }
+  .roadmap-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+  }
+  .roadmap-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .roadmap-item:not(.roadmap-done):not(.roadmap-active) .roadmap-content h3 {
+    color: var(--text-muted);
+  }
+  .roadmap-item:not(.roadmap-done):not(.roadmap-active) .roadmap-content p {
+    color: var(--text-muted);
+  }
+
+  /* ═══ Responsive ═══ */
+  @media (max-width: 768px) {
+    .product-detail {
+      grid-template-columns: 1fr;
+    }
+    .product-detail--reverse .product-info,
+    .product-detail--reverse .product-visual {
+      order: unset;
+    }
+    .terminal { position: static; }
+  }
+</style>

@@ -1,0 +1,360 @@
+---
+import type { Locale } from '../i18n/utils';
+import { ui } from '../i18n/ui';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: Locale;
+}
+
+const { title, description = 'The governed runtime for embodied agents. Build, deploy, and evolve intelligent machines with safety-first infrastructure.', lang = 'en' } = Astro.props;
+
+const t = ui[lang];
+const prefix = lang === 'zh' ? '/zh' : '';
+const currentPath = Astro.url.pathname;
+const switchLang = lang === 'en' ? '/zh' + (currentPath === '/' ? '' : currentPath) : currentPath.replace(/^\/zh/, '') || '/';
+---
+
+<html lang={lang} data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- Fonts: Instrument Serif from Google, Geist from Vercel CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
+
+  <!-- OG -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>{title}</title>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href={`${prefix}/`} class="nav-logo">
+        <span class="nav-logo-mark">&Delta;</span> AEROS
+      </a>
+      <ul class="nav-links">
+        <li><a href={`${prefix}/product`}>{t['nav.product']}</a></li>
+        <li><a href={`${prefix}/technology`}>{t['nav.technology']}</a></li>
+        <li><a href={`${prefix}/use-cases`}>{t['nav.useCases']}</a></li>
+        <li><a href={`${prefix}/open-source`}>{t['nav.openSource']}</a></li>
+        <li><a href={`${prefix}/about`}>{t['nav.about']}</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+        <a href={switchLang} class="btn btn-secondary btn-sm lang-switch">{t['nav.langSwitch']}</a>
+        <a href={`${prefix}/contact`} class="btn btn-primary btn-sm">{t['nav.bookDemo']}</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span id="theme-icon">&#9790;</span>
+        </button>
+      </div>
+      <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href={`${prefix}/product`}>{t['nav.product']}</a></li>
+      <li><a href={`${prefix}/technology`}>{t['nav.technology']}</a></li>
+      <li><a href={`${prefix}/use-cases`}>{t['nav.useCases']}</a></li>
+      <li><a href={`${prefix}/open-source`}>{t['nav.openSource']}</a></li>
+      <li><a href={`${prefix}/about`}>{t['nav.about']}</a></li>
+      <li><a href={`${prefix}/contact`}>{t['nav.bookDemo']}</a></li>
+      <li><a href={switchLang} class="lang-switch-mobile">{t['nav.langSwitch']}</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="nav-logo-mark">&Delta;</span> AEROS
+          </div>
+          <p class="footer-tagline">{t['footer.tagline']}</p>
+        </div>
+        <div class="footer-col">
+          <h4>{t['footer.product']}</h4>
+          <ul>
+            <li><a href={`${prefix}/product`}>{t['footer.runtimeCore']}</a></li>
+            <li><a href={`${prefix}/product#ecm`}>{t['footer.ecmSystem']}</a></li>
+            <li><a href={`${prefix}/product#governance`}>{t['footer.governance']}</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>{t['footer.openSource']}</h4>
+          <ul>
+            <li><a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href={`${prefix}/open-source`}>{t['footer.documentation']}</a></li>
+            <li><a href={`${prefix}/open-source#contributing`}>{t['footer.contributing']}</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>{t['footer.company']}</h4>
+          <ul>
+            <li><a href={`${prefix}/about`}>{t['footer.about']}</a></li>
+            <li><a href={`${prefix}/contact`}>{t['footer.contact']}</a></li>
+            <li><a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener">{t['footer.research']}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>{t['footer.copyright']}</span>
+        <span class="footer-built">{t['footer.built']}</span>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const stored = localStorage.getItem('theme');
+    if (stored) document.documentElement.setAttribute('data-theme', stored);
+
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      icon.textContent = next === 'dark' ? '\u263E' : '\u2600';
+    });
+
+    // Update icon on load
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+      icon.textContent = '\u2600';
+    }
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      mobileToggle.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+
+  /* ─── Nav ─── */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10, 14, 23, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  [data-theme="light"] .nav {
+    background: rgba(245, 247, 250, 0.85);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .nav-logo-mark {
+    color: var(--primary);
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--space-xl);
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color var(--duration-short);
+  }
+  .nav-links a:hover { color: var(--text-primary); }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .lang-switch {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 16px;
+    transition: all var(--duration-short);
+    margin-left: var(--space-xs);
+  }
+  .theme-toggle:hover {
+    border-color: var(--primary);
+    color: var(--text-primary);
+  }
+
+  .nav-mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav-mobile-toggle span {
+    width: 20px;
+    height: 2px;
+    background: var(--text-secondary);
+    transition: all var(--duration-short);
+  }
+  .nav-mobile-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-mobile-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
+    padding: var(--space-lg);
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu ul { display: flex; flex-direction: column; gap: var(--space-md); }
+  .mobile-menu a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .lang-switch-mobile {
+    color: var(--primary) !important;
+    font-weight: 600 !important;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links, .nav-actions { display: none; }
+    .nav-mobile-toggle { display: flex; }
+  }
+
+  /* ─── Footer ─── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: var(--space-3xl) 0 var(--space-2xl);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .footer-brand {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 240px;
+  }
+
+  .footer-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-col ul { display: flex; flex-direction: column; gap: var(--space-sm); }
+  .footer-col a {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color var(--duration-short);
+  }
+  .footer-col a:hover { color: var(--text-primary); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-bottom { flex-direction: column; gap: var(--space-sm); }
+  }
+
+  /* ─── Main content offset for fixed nav ─── */
+  main { padding-top: 64px; }
+</style>

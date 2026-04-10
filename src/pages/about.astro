@@ -1,0 +1,344 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — AEROS" description="The team and mission behind AEROS — building governed runtime infrastructure for embodied agents.">
+
+  <!-- ═══ Mission ═══ -->
+  <section class="section" style="padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="section-label">About</div>
+      <h1 class="page-title">
+        Building the infrastructure<br>embodied agents deserve
+      </h1>
+      <p class="page-desc">
+        The future of robotics isn't just stronger models or better hardware.
+        It's who defines the layer where agents actually <em>run</em>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Mission Statement ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="mission-block">
+        <div class="mission-quote">
+          <p>
+            We build governed, evolvable runtime infrastructure for embodied agents.
+          </p>
+          <p class="mission-sub">
+            Not another robot OS. Not another model wrapper.
+            A runtime platform that makes the gap between "AI demo" and "AI in production"
+            manageable, safe, and auditable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Why This Matters ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Thesis</div>
+      <h2 class="section-title">Why embodied agents need runtime infrastructure</h2>
+
+      <div class="thesis-grid">
+        <div class="thesis-card">
+          <div class="thesis-num">01</div>
+          <h3>Models are necessary but not sufficient</h3>
+          <p>Foundation models give agents the ability to reason. But reasoning without governance, state management, and lifecycle control is a demo, not a product.</p>
+        </div>
+        <div class="thesis-card">
+          <div class="thesis-num">02</div>
+          <h3>Hardware diversity is accelerating</h3>
+          <p>Humanoids, quadrupeds, AMRs, drones, collaborative arms — each with different capabilities. Capabilities must be modular, portable, and versionable.</p>
+        </div>
+        <div class="thesis-card">
+          <div class="thesis-num">03</div>
+          <h3>Production demands governance</h3>
+          <p>In warehouses, hospitals, and public spaces, "what happened?" and "who authorized that?" are not optional questions. Runtime governance makes them answerable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ Milestones ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Timeline</div>
+      <h2 class="section-title">Milestones</h2>
+
+      <div class="timeline">
+        <div class="timeline-item done">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026.04</span>
+            <h3>7-paper research program completed</h3>
+            <p>Systematic academic foundation covering runtime, governance, evolution, contracts, federation, and benchmarking.</p>
+          </div>
+        </div>
+        <div class="timeline-item done">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026.04</span>
+            <h3>arXiv preprints published</h3>
+            <p>4 papers publicly available for peer review and academic scrutiny.</p>
+          </div>
+        </div>
+        <div class="timeline-item done">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026.04</span>
+            <h3>AEROS open source MVP</h3>
+            <p>Runtime Core released under Apache 2.0. Project page launched.</p>
+          </div>
+        </div>
+        <div class="timeline-item active">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026.H2</span>
+            <h3>Runtime Core v1.0</h3>
+            <p>Production-ready runtime with full lifecycle management, ECM support, and tracing.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026.H2</span>
+            <h3>First pilot deployment</h3>
+            <p>Proof-of-concept deployment with a warehouse automation partner.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2027</span>
+            <h3>Governance Console launch</h3>
+            <p>Enterprise governance product for fleet-scale policy enforcement and audit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Investor CTA ═══ -->
+  <section class="section section-alt" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title">For investors</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl);">
+        AEROS is defining the runtime layer for embodied AI — a category that doesn't exist yet.
+        We're looking for partners who understand infrastructure plays.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn-primary">Schedule a Call</a>
+        <a href="/contact" class="btn btn-secondary">Request BP</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-title em { font-style: normal; color: var(--primary); }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+  .page-desc em { font-style: normal; color: var(--primary); font-weight: 600; }
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Mission ═══ */
+  .mission-block {
+    max-width: 720px;
+  }
+  .mission-quote p {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: var(--space-lg);
+  }
+  .mission-sub {
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ═══ Thesis ═══ */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+  .thesis-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+  .thesis-num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .thesis-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+  }
+  .thesis-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ═══ Team ═══ */
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+  .team-card {
+    display: flex;
+    gap: var(--space-xl);
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    align-items: start;
+  }
+  .team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-lg);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .team-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .team-role {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .team-bio {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .team-hiring {
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-base);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-md);
+  }
+  .team-hiring a {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  /* ═══ Timeline ═══ */
+  .timeline {
+    max-width: 640px;
+    position: relative;
+    padding-left: var(--space-xl);
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: var(--space-xl);
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+
+  .timeline-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-xl) + 2px);
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bg-base);
+    border: 2px solid var(--border);
+  }
+  .done .timeline-marker {
+    background: var(--success);
+    border-color: var(--success);
+  }
+  .active .timeline-marker {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.2);
+  }
+
+  .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .timeline-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: var(--space-xs) 0;
+  }
+  .timeline-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .timeline-item:not(.done):not(.active) h3 { color: var(--text-muted); }
+  .timeline-item:not(.done):not(.active) p { color: var(--text-muted); }
+
+  @media (max-width: 768px) {
+    .thesis-grid { grid-template-columns: 1fr; }
+    .team-card { flex-direction: column; }
+  }
+</style>

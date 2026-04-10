@@ -1,0 +1,513 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Product — AEROS" description="AEROS delivers three layers of runtime infrastructure: Agent Runtime, ECM Package System, and Governance Console.">
+
+  <!-- ═══ Section 1: Product Positioning ═══ -->
+  <section class="product-hero section">
+    <div class="container">
+      <div class="section-label">Product</div>
+      <h1 class="page-title">Not a tool.<br>A runtime platform.</h1>
+      <p class="page-desc">
+        We don't ship a library you import. We deliver an infrastructure layer
+        that makes embodied agents runnable, governable, and evolvable.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 2: Runtime Core ═══ -->
+  <section class="section section-alt" id="runtime">
+    <div class="container">
+      <div class="product-detail">
+        <div class="product-info">
+          <div class="product-badge">Apache 2.0</div>
+          <h2 class="product-name">Agent Runtime Core</h2>
+          <p class="product-problem">
+            <strong>The problem:</strong> How do you keep an embodied agent running continuously,
+            stably, and recoverably in the real world?
+          </p>
+          <ul class="product-features">
+            <li>
+              <span class="feature-name">Lifecycle Management</span>
+              <span class="feature-desc">Init, start, pause, resume, stop, restart — full agent state machine</span>
+            </li>
+            <li>
+              <span class="feature-name">State Persistence</span>
+              <span class="feature-desc">Agent state survives crashes, restarts, and migrations</span>
+            </li>
+            <li>
+              <span class="feature-name">Task Scheduling</span>
+              <span class="feature-desc">Priority-aware scheduling with preemption and deadline guarantees</span>
+            </li>
+            <li>
+              <span class="feature-name">Execution Loop</span>
+              <span class="feature-desc">Sense-decide-act closed loop with timeout protection</span>
+            </li>
+            <li>
+              <span class="feature-name">Fault Recovery</span>
+              <span class="feature-desc">Four-level structured recovery: retry, fallback, degrade, halt</span>
+            </li>
+            <li>
+              <span class="feature-name">Distributed Tracing</span>
+              <span class="feature-desc">OpenTelemetry-native tracing across the full execution chain</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">runtime status</span>
+            </div>
+<pre class="terminal-body"><span class="prompt">$</span> <span class="cmd">aeros runtime status</span>
+
+<span class="dim">AGENT    STATE      UPTIME   TASKS</span>
+<span class="out">arm-01   </span><span class="ok">running</span><span class="out">    14d 3h   1,247</span>
+<span class="out">nav-03   </span><span class="ok">running</span><span class="out">    14d 3h     892</span>
+<span class="out">vis-07   </span><span class="warn">degraded</span><span class="out">   14d 3h     756</span>
+
+<span class="prompt">$</span> <span class="cmd">aeros runtime recover vis-07</span>
+<span class="ok">&#10003; Fallback: object-detect v1.3</span>
+<span class="ok">&#10003; vis-07 recovered in 240ms</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 3: ECM Package System ═══ -->
+  <section class="section" id="ecm">
+    <div class="container">
+      <div class="product-detail product-detail--reverse">
+        <div class="product-info">
+          <div class="product-badge">Apache 2.0</div>
+          <h2 class="product-name">ECM Package System</h2>
+          <p class="product-problem">
+            <strong>The problem:</strong> How do you standardize, version, and safely upgrade
+            the capabilities of embodied agents?
+          </p>
+          <ul class="product-features">
+            <li>
+              <span class="feature-name">ECM Standard Format</span>
+              <span class="feature-desc">Declarative capability modules with metadata, dependencies, and contracts</span>
+            </li>
+            <li>
+              <span class="feature-name">Install / Upgrade / Rollback</span>
+              <span class="feature-desc">Package operations with atomic transactions and instant rollback</span>
+            </li>
+            <li>
+              <span class="feature-name">Semantic Versioning</span>
+              <span class="feature-desc">Breaking vs. non-breaking changes tracked at the contract level</span>
+            </li>
+            <li>
+              <span class="feature-name">Six-Dimensional Contracts</span>
+              <span class="feature-desc">Perception, cognition, action, safety, resource, interface constraints</span>
+            </li>
+            <li>
+              <span class="feature-name">Compatibility Checking</span>
+              <span class="feature-desc">Pre-install validation against hardware, runtime, and policy constraints</span>
+            </li>
+            <li>
+              <span class="feature-name">Shadow Mode</span>
+              <span class="feature-desc">New capabilities run in parallel without affecting production behavior</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">ecm operations</span>
+            </div>
+<pre class="terminal-body"><span class="prompt">$</span> <span class="cmd">aeros ecm install dual-grasp@2.1</span>
+<span class="dim"># Checking contracts...</span>
+<span class="ok">&#10003; Perception: stereo-cam v3+  OK</span>
+<span class="ok">&#10003; Action: force-feedback v2+  OK</span>
+<span class="ok">&#10003; Safety: max-force 50N      OK</span>
+<span class="ok">&#10003; Resource: GPU mem 2GB      OK</span>
+
+<span class="ok">&#10003; ECM dual-grasp@2.1 installed</span>
+
+<span class="prompt">$</span> <span class="cmd">aeros ecm shadow dual-grasp@2.1</span>
+<span class="ok">&#10003; Shadow mode active...</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 4: Governance Console ═══ -->
+  <section class="section section-alt" id="governance">
+    <div class="container">
+      <div class="product-detail">
+        <div class="product-info">
+          <div class="product-badge badge-commercial">Enterprise</div>
+          <h2 class="product-name">Governance Console</h2>
+          <p class="product-problem">
+            <strong>The problem:</strong> How do you enforce constraints, audit behavior,
+            and maintain control over agents operating in the real world?
+          </p>
+          <ul class="product-features">
+            <li>
+              <span class="feature-name">Policy DSL</span>
+              <span class="feature-desc">Declarative policy language for defining what agents can and cannot do</span>
+            </li>
+            <li>
+              <span class="feature-name">Watcher Engine</span>
+              <span class="feature-desc">Real-time monitoring with configurable triggers and escalation rules</span>
+            </li>
+            <li>
+              <span class="feature-name">Structured Recovery</span>
+              <span class="feature-desc">Four-level orchestrated recovery: log, alert, intervene, halt</span>
+            </li>
+            <li>
+              <span class="feature-name">Full Audit Trail</span>
+              <span class="feature-desc">Every decision, action, and state change recorded and queryable</span>
+            </li>
+            <li>
+              <span class="feature-name">Conflict Detection</span>
+              <span class="feature-desc">Detect and resolve policy conflicts and coverage gaps automatically</span>
+            </li>
+            <li>
+              <span class="feature-name">Version Rollback</span>
+              <span class="feature-desc">Roll back any policy, capability, or agent configuration to any prior state</span>
+            </li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">governance console</span>
+            </div>
+<pre class="terminal-body"><span class="prompt">$</span> <span class="cmd">aeros gov policy list --active</span>
+
+<span class="dim">POLICY            SCOPE    STATUS</span>
+<span class="out">max-force-50N     fleet    </span><span class="ok">active</span>
+<span class="out">workspace-bounds  fleet    </span><span class="ok">active</span>
+<span class="out">night-mode        zone-A   </span><span class="ok">active</span>
+<span class="out">human-proximity   global   </span><span class="ok">active</span>
+
+<span class="prompt">$</span> <span class="cmd">aeros gov audit --last 24h</span>
+<span class="out">Events: 1,247 | Violations: 0</span>
+<span class="ok">&#10003; All actions within policy</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 5: Roadmap ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Roadmap</div>
+      <h2 class="section-title">Product timeline</h2>
+
+      <div class="roadmap">
+        <div class="roadmap-item roadmap-done">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 1</div>
+            <h3>Runtime Core</h3>
+            <p>Agent lifecycle, state, scheduling, execution, recovery, tracing</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-done">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 2</div>
+            <h3>ECM Package System</h3>
+            <p>Standard format, contracts, versioning, install/upgrade, shadow mode</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-active">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 3</div>
+            <h3>Governance Engine</h3>
+            <p>Policy DSL, watchers, structured recovery, audit, conflict detection</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 4</div>
+            <h3>Cross-Embodiment</h3>
+            <p>ECM portability across robot morphologies and hardware platforms</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-marker"></div>
+          <div class="roadmap-content">
+            <div class="roadmap-phase">Phase 5</div>
+            <h3>Ecosystem</h3>
+            <p>ECM marketplace, community contributions, partner integrations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <h2 class="section-title">See AEROS in action</h2>
+      <p class="section-desc" style="margin: 0 auto var(--space-xl)">
+        Schedule a technical walkthrough of the runtime, ECM system, and governance console.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="/contact" class="btn btn-primary">Book a Demo</a>
+        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-secondary">
+          View Source <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ═══ Page Header ═══ */
+  .product-hero {
+    padding-top: 48px;
+    padding-bottom: var(--space-2xl);
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .page-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  /* ═══ Product Detail Layout ═══ */
+  .product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+  .product-detail--reverse .product-info {
+    order: 2;
+  }
+  .product-detail--reverse .product-visual {
+    order: 1;
+  }
+
+  .product-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .badge-commercial {
+    background: rgba(0, 194, 168, 0.1);
+    color: var(--secondary);
+  }
+
+  .product-name {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.01em;
+  }
+
+  .product-problem {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+    padding: var(--space-md);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary);
+  }
+  .product-problem strong {
+    color: var(--text-primary);
+  }
+
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .product-features li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .product-features li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .feature-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .feature-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ═══ Terminal ═══ */
+  .product-visual {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .product-info {
+    min-width: 0;
+  }
+  .terminal {
+    background: #0D1117;
+    border: 1px solid #21262D;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 10px var(--space-md);
+    background: #161B22;
+    border-bottom: 1px solid #21262D;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot.red { background: #FF5F57; }
+  .dot.yellow { background: #FEBC2E; }
+  .dot.green { background: #28C840; }
+  .terminal-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #8B949E;
+    margin-left: var(--space-sm);
+  }
+  .terminal-body {
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: #C9D1D9;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 0;
+  }
+  .prompt { color: var(--secondary); }
+  .cmd { color: #F0F6FC; }
+  .dim { color: #484F58; }
+  .out { color: #8B949E; }
+  .ok { color: var(--success); }
+  .warn { color: var(--warning); }
+
+  /* ═══ Section Alt ═══ */
+  .section-alt {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ Roadmap ═══ */
+  .roadmap {
+    max-width: 640px;
+    position: relative;
+    padding-left: var(--space-xl);
+  }
+  .roadmap::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .roadmap-item {
+    position: relative;
+    padding-bottom: var(--space-xl);
+  }
+  .roadmap-item:last-child { padding-bottom: 0; }
+
+  .roadmap-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-xl) + 2px);
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bg-base);
+    border: 2px solid var(--border);
+  }
+  .roadmap-done .roadmap-marker {
+    background: var(--success);
+    border-color: var(--success);
+  }
+  .roadmap-active .roadmap-marker {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.2);
+  }
+
+  .roadmap-phase {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-xs);
+  }
+  .roadmap-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+  }
+  .roadmap-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .roadmap-item:not(.roadmap-done):not(.roadmap-active) .roadmap-content h3 {
+    color: var(--text-muted);
+  }
+  .roadmap-item:not(.roadmap-done):not(.roadmap-active) .roadmap-content p {
+    color: var(--text-muted);
+  }
+
+  /* ═══ Responsive ═══ */
+  @media (max-width: 768px) {
+    .product-detail {
+      grid-template-columns: 1fr;
+    }
+    .product-detail--reverse .product-info,
+    .product-detail--reverse .product-visual {
+      order: unset;
+    }
+    .terminal { position: static; }
+  }
+</style>
