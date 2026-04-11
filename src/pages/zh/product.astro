@@ -2,15 +2,15 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="产品 — AEROS" description="AEROS 提供三层运行时基础设施：Agent 运行时、ECM 包管理系统和治理控制台。" lang="zh">
+<BaseLayout title="产品 — AEROS" description="AEROS 三层运行时：Agent 运行时、ECM 包管理、治理控制台。让具身智能体稳定运行、安全进化。" lang="zh">
 
   <!-- ═══ Section 1: Product Positioning ═══ -->
   <section class="product-hero section">
     <div class="container">
       <div class="section-label">产品</div>
-      <h1 class="page-title">不是工具。<br>是运行时平台。</h1>
+      <h1 class="page-title">不是工具库。<br>是运行时平台。</h1>
       <p class="page-desc">
-        我们不提供你引入的库。我们交付的是让具身智能体可运行、可治理、可进化的基础设施层。
+        不是让你 import 的 SDK，而是让具身智能体跑起来、管起来、进化下去的基础设施。
       </p>
     </div>
   </section>
@@ -23,32 +23,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="product-badge">Apache 2.0</div>
           <h2 class="product-name">Agent 运行时核心</h2>
           <p class="product-problem">
-            <strong>问题：</strong>如何让具身智能体在真实世界中持续、稳定、可恢复地运行？
+            <strong>核心问题：</strong>智能体在真实世界里怎么才能持续跑、稳定跑、挂了能恢复？
           </p>
           <ul class="product-features">
             <li>
               <span class="feature-name">生命周期管理</span>
-              <span class="feature-desc">初始化、启动、暂停、恢复、停止、重启 — 完整的 Agent 状态机</span>
+              <span class="feature-desc">初始化、启动、暂停、恢复、停止、重启——完整的 Agent 状态机</span>
             </li>
             <li>
               <span class="feature-name">状态持久化</span>
-              <span class="feature-desc">Agent 状态在崩溃、重启和迁移后依然存在</span>
+              <span class="feature-desc">崩溃、重启、迁移都不丢状态</span>
             </li>
             <li>
               <span class="feature-name">任务调度</span>
-              <span class="feature-desc">优先级感知的调度，支持抢占和截止时间保证</span>
+              <span class="feature-desc">按优先级调度，支持抢占和 deadline 保证</span>
             </li>
             <li>
-              <span class="feature-name">执行循环</span>
-              <span class="feature-desc">感知-决策-执行闭环，带超时保护</span>
+              <span class="feature-name">执行闭环</span>
+              <span class="feature-desc">感知→决策→执行循环，带超时兜底</span>
             </li>
             <li>
               <span class="feature-name">故障恢复</span>
-              <span class="feature-desc">四级结构化恢复：重试、降级、回退、停机</span>
+              <span class="feature-desc">四级递进恢复：重试 → 降级 → 回退 → 停机</span>
             </li>
             <li>
-              <span class="feature-name">分布式追踪</span>
-              <span class="feature-desc">原生 OpenTelemetry 追踪，覆盖完整执行链路</span>
+              <span class="feature-name">全链路追踪</span>
+              <span class="feature-desc">原生 OpenTelemetry，每一步执行都可追溯</span>
             </li>
           </ul>
         </div>
@@ -84,32 +84,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="product-badge">Apache 2.0</div>
           <h2 class="product-name">ECM 包管理系统</h2>
           <p class="product-problem">
-            <strong>问题：</strong>如何标准化、版本化并安全升级具身智能体的能力？
+            <strong>核心问题：</strong>智能体的能力怎么标准化、怎么版本管理、怎么安全升级？
           </p>
           <ul class="product-features">
             <li>
               <span class="feature-name">ECM 标准格式</span>
-              <span class="feature-desc">声明式能力模块，包含元数据、依赖和契约</span>
+              <span class="feature-desc">声明式能力模块，自带元数据、依赖关系和契约定义</span>
             </li>
             <li>
-              <span class="feature-name">安装 / 升级 / 回滚</span>
-              <span class="feature-desc">包操作支持原子事务和即时回滚</span>
+              <span class="feature-name">安装 · 升级 · 回滚</span>
+              <span class="feature-desc">原子操作，出问题秒级回滚</span>
             </li>
             <li>
-              <span class="feature-name">语义版本控制</span>
-              <span class="feature-desc">在契约层面追踪破坏性与非破坏性变更</span>
+              <span class="feature-name">语义化版本</span>
+              <span class="feature-desc">契约层面追踪哪些变更是破坏性的</span>
             </li>
             <li>
               <span class="feature-name">六维能力契约</span>
-              <span class="feature-desc">感知、认知、行动、安全、资源、接口约束</span>
+              <span class="feature-desc">感知、认知、行动、安全、资源、接口——六个维度全覆盖</span>
             </li>
             <li>
-              <span class="feature-name">兼容性检查</span>
-              <span class="feature-desc">安装前针对硬件、运行时和策略约束进行验证</span>
+              <span class="feature-name">兼容性校验</span>
+              <span class="feature-desc">装之前先检查：硬件够不够、运行时兼不兼容、策略允不允许</span>
             </li>
             <li>
               <span class="feature-name">影子模式</span>
-              <span class="feature-desc">新能力并行运行，不影响生产行为</span>
+              <span class="feature-desc">新能力先跑在旁边观察，不碰生产环境</span>
             </li>
           </ul>
         </div>
@@ -146,32 +146,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="product-badge badge-commercial">企业版</div>
           <h2 class="product-name">治理控制台</h2>
           <p class="product-problem">
-            <strong>问题：</strong>如何对在真实世界中运行的智能体实施约束、审计行为并保持控制？
+            <strong>核心问题：</strong>真实世界里的智能体，怎么约束行为、审计决策、保持可控？
           </p>
           <ul class="product-features">
             <li>
               <span class="feature-name">策略 DSL</span>
-              <span class="feature-desc">声明式策略语言，定义智能体能做和不能做什么</span>
+              <span class="feature-desc">用声明式语言写清楚：智能体能做什么、不能做什么</span>
             </li>
             <li>
-              <span class="feature-name">监控器引擎</span>
-              <span class="feature-desc">实时监控，支持可配置触发器和升级规则</span>
+              <span class="feature-name">实时监控引擎</span>
+              <span class="feature-desc">可配置触发器和升级规则，异常实时捕获</span>
             </li>
             <li>
-              <span class="feature-name">结构化恢复</span>
-              <span class="feature-desc">四级编排恢复：记录、告警、干预、停机</span>
+              <span class="feature-name">分级恢复</span>
+              <span class="feature-desc">四级响应：记录 → 告警 → 干预 → 停机</span>
             </li>
             <li>
               <span class="feature-name">完整审计链路</span>
-              <span class="feature-desc">每个决策、行动和状态变更均被记录且可查询</span>
+              <span class="feature-desc">每个决策、每次行动、每次状态变更，全记录、可查询</span>
             </li>
             <li>
               <span class="feature-name">冲突检测</span>
-              <span class="feature-desc">自动检测并解决策略冲突和覆盖缺口</span>
+              <span class="feature-desc">策略之间有冲突？自动检测，自动提示</span>
             </li>
             <li>
-              <span class="feature-name">版本回滚</span>
-              <span class="feature-desc">将任何策略、能力或 Agent 配置回滚到任意历史状态</span>
+              <span class="feature-name">一键回滚</span>
+              <span class="feature-desc">策略、能力、Agent 配置——任何时候都能回到之前的状态</span>
             </li>
           </ul>
         </div>
@@ -204,7 +204,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">路线图</div>
-      <h2 class="section-title">产品时间线</h2>
+      <h2 class="section-title">我们在哪里，要去哪里</h2>
 
       <div class="roadmap">
         <div class="roadmap-item roadmap-done">
@@ -212,7 +212,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="roadmap-content">
             <div class="roadmap-phase">Phase 1</div>
             <h3>运行时核心</h3>
-            <p>Agent 生命周期、状态、调度、执行、恢复、追踪</p>
+            <p>生命周期 · 状态 · 调度 · 执行 · 恢复 · 追踪</p>
           </div>
         </div>
         <div class="roadmap-item roadmap-done">
@@ -220,7 +220,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="roadmap-content">
             <div class="roadmap-phase">Phase 2</div>
             <h3>ECM 包管理系统</h3>
-            <p>标准格式、契约、版本控制、安装/升级、影子模式</p>
+            <p>标准格式 · 契约 · 版本管理 · 安装升级 · 影子模式</p>
           </div>
         </div>
         <div class="roadmap-item roadmap-active">
@@ -228,15 +228,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="roadmap-content">
             <div class="roadmap-phase">Phase 3</div>
             <h3>治理引擎</h3>
-            <p>策略 DSL、监控器、结构化恢复、审计、冲突检测</p>
+            <p>策略 DSL · 监控 · 分级恢复 · 审计 · 冲突检测</p>
           </div>
         </div>
         <div class="roadmap-item">
           <div class="roadmap-marker"></div>
           <div class="roadmap-content">
             <div class="roadmap-phase">Phase 4</div>
-            <h3>跨具身化</h3>
-            <p>ECM 在不同机器人形态和硬件平台间的可移植性</p>
+            <h3>跨形态迁移</h3>
+            <p>ECM 跨不同机器人形态和硬件平台自由迁移</p>
           </div>
         </div>
         <div class="roadmap-item">
@@ -244,7 +244,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <div class="roadmap-content">
             <div class="roadmap-phase">Phase 5</div>
             <h3>生态系统</h3>
-            <p>ECM 市场、社区贡献、合作伙伴集成</p>
+            <p>ECM 市场 · 社区贡献 · 合作伙伴集成</p>
           </div>
         </div>
       </div>
@@ -254,9 +254,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- ═══ CTA ═══ -->
   <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
     <div class="container">
-      <h2 class="section-title">体验 AEROS</h2>
+      <h2 class="section-title">亲眼看看 AEROS</h2>
       <p class="section-desc" style="margin: 0 auto var(--space-xl)">
-        预约一次技术演示，了解运行时、ECM 系统和治理控制台。
+        预约一次技术 Demo，亲身体验运行时、ECM 系统和治理控制台。
       </p>
       <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
         <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>

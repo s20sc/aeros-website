@@ -38,7 +38,7 @@ export const ui = {
     'nav.langSwitch': 'EN',
 
     // Footer
-    'footer.tagline': '具身智能体的可治理运行时。',
+    'footer.tagline': '让具身智能体跑得稳、管得住。',
     'footer.product': '产品',
     'footer.runtimeCore': '运行时核心',
     'footer.ecmSystem': 'ECM 系统',
@@ -51,7 +51,7 @@ export const ui = {
     'footer.contact': '联系我们',
     'footer.research': '研究',
     'footer.copyright': '\u00A9 2026 AEROS \u00B7 Apache 2.0',
-    'footer.built': '为具身智能而生。',
+    'footer.built': '为具身智能而造。',
   },
 } as const;
 

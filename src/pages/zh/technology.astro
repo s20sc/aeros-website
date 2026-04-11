@@ -2,17 +2,17 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="技术架构 — AEROS" description="AEROS 五层运行时架构：从硬件抽象到受治理的智能体执行。" lang="zh">
+<BaseLayout title="技术架构 — AEROS" description="AEROS 五层运行时架构：从硬件抽象到智能体治理执行，层层分明。" lang="zh">
 
   <!-- ═══ Header ═══ -->
   <section class="section" style="padding-bottom: var(--space-2xl);">
     <div class="container">
       <div class="section-label">技术架构</div>
-      <h1 class="page-title">单智能体原则</h1>
+      <h1 class="page-title">一台机器人，一个 Agent</h1>
       <p class="page-desc">
-        一个机器人 = 一个持久化 Agent。能力通过 ECM 加载。
-        行为受治理约束。不是多智能体集群。
-        不是模型直连硬件。
+        能力靠 ECM 加载，行为靠治理约束。
+        不搞多智能体集群，不搞模型直连硬件。
+        一个 Agent 管到底。
       </p>
     </div>
   </section>
@@ -23,18 +23,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="philosophy-grid">
         <div class="philosophy-card">
           <div class="philosophy-icon">&Delta;</div>
-          <h3>一个机器人一个 Agent</h3>
-          <p>每个机器人承载一个持久化 Agent，在整个运行生命周期中保持身份、状态和学习经验的连续性。</p>
+          <h3>一机一 Agent</h3>
+          <p>每台机器人对应一个持久化 Agent。身份、状态、学习经验，贯穿整个运行周期不丢失。</p>
         </div>
         <div class="philosophy-card">
           <div class="philosophy-icon">&loz;</div>
-          <h3>能力即模块</h3>
-          <p>Agent 不包含能力 — 它们加载能力。ECM 包独立于 Agent 本身进行安装、版本管理、升级和回滚。</p>
+          <h3>能力可插拔</h3>
+          <p>Agent 本身不写死能力，而是按需加载。ECM 包独立安装、独立版本管理，随时升级和回滚。</p>
         </div>
         <div class="philosophy-card">
           <div class="philosophy-icon">&lambda;</div>
-          <h3>治理不可选</h3>
-          <p>每次能力调用都经过治理引擎。安全性是架构层面的，不是愿景层面的。审计是完整的，不是采样的。</p>
+          <h3>治理不是可选项</h3>
+          <p>每次能力调用都得过治理引擎。安全靠架构保证，不靠理想主义。审计链路完整记录，不做抽样。</p>
         </div>
       </div>
     </div>
@@ -44,9 +44,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">架构</div>
-      <h2 class="section-title">五层运行时堆栈</h2>
+      <h2 class="section-title">五层运行时架构</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl);">
-        点击每一层查看其职责和关键组件。
+        点击每一层，看看它负责什么。
       </p>
 
       <div class="arch-interactive">
@@ -76,115 +76,115 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="arch-details">
           <div class="arch-detail active" id="detail-agent">
             <h3>第 5 层：Agent</h3>
-            <p class="arch-detail-desc">应用层，运行决策逻辑。每个 Agent 是一个持久化实体，拥有身份、记忆和目标。</p>
+            <p class="arch-detail-desc">最上层，跑决策逻辑。每个 Agent 都有自己的身份、记忆和目标，是个持久化的实体。</p>
             <div class="arch-detail-grid">
               <div class="arch-component">
                 <span class="comp-name">决策引擎</span>
-                <span class="comp-desc">基础模型集成、规划、推理</span>
+                <span class="comp-desc">对接大模型，负责规划和推理</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">状态管理器</span>
-                <span class="comp-desc">跨会话和重启的持久化 Agent 状态</span>
+                <span class="comp-desc">Agent 状态跨会话、跨重启持久保存</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">目标追踪器</span>
-                <span class="comp-desc">任务分解、进度监控、重规划</span>
+                <span class="comp-desc">拆任务、盯进度、必要时重新规划</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">经验记忆</span>
-                <span class="comp-desc">学习到的行为、失败历史、适应数据</span>
+                <span class="comp-desc">学到的行为、踩过的坑、适应性数据</span>
               </div>
             </div>
           </div>
 
           <div class="arch-detail" id="detail-governance">
             <h3>第 4 层：治理</h3>
-            <p class="arch-detail-desc">策略执行层。每次能力调用在执行前都会通过活跃策略进行验证。</p>
+            <p class="arch-detail-desc">策略执行层。每次能力调用在真正执行前，都要过一遍当前生效的策略。</p>
             <div class="arch-detail-grid">
               <div class="arch-component">
                 <span class="comp-name">策略引擎</span>
-                <span class="comp-desc">声明式 DSL，定义运行约束</span>
+                <span class="comp-desc">声明式语言，写清运行边界</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">监控器系统</span>
-                <span class="comp-desc">实时不变量监控和违规检测</span>
+                <span class="comp-desc">实时盯住不变量，违规立刻触发</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">恢复编排器</span>
-                <span class="comp-desc">四级结构化响应：记录、告警、干预、停机</span>
+                <span class="comp-desc">记录 → 告警 → 干预 → 停机，逐级响应</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">审计记录器</span>
-                <span class="comp-desc">每个决策、行动和状态变更的不可变日志</span>
+                <span class="comp-desc">每个决策和行动都有不可篡改的日志</span>
               </div>
             </div>
           </div>
 
           <div class="arch-detail" id="detail-ecm">
             <h3>第 3 层：ECM 包</h3>
-            <p class="arch-detail-desc">能力层。Agent 以版本化、契约绑定的模块形式加载能力，可安装、升级和回滚。</p>
+            <p class="arch-detail-desc">能力层。Agent 的能力以模块形式加载，每个模块都有版本号和契约绑定，随时可装可卸可回滚。</p>
             <div class="arch-detail-grid">
               <div class="arch-component">
                 <span class="comp-name">契约注册中心</span>
-                <span class="comp-desc">Agent 与硬件之间的六维类型化接口</span>
+                <span class="comp-desc">六维类型化接口，连接 Agent 和硬件</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">包管理器</span>
-                <span class="comp-desc">安装、升级、回滚，支持原子事务</span>
+                <span class="comp-desc">装、升、回滚，全部原子操作</span>
               </div>
               <div class="arch-component">
-                <span class="comp-name">兼容性检查器</span>
-                <span class="comp-desc">安装前针对硬件和策略约束进行验证</span>
+                <span class="comp-name">兼容性校验器</span>
+                <span class="comp-desc">装之前先看硬件和策略是否允许</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">影子执行器</span>
-                <span class="comp-desc">新能力并行运行，不影响生产环境</span>
+                <span class="comp-desc">新能力先在旁边跑，不碰生产环境</span>
               </div>
             </div>
           </div>
 
           <div class="arch-detail" id="detail-runtime">
             <h3>第 2 层：运行时</h3>
-            <p class="arch-detail-desc">执行层。管理 Agent 生命周期、调度任务、运行感知-决策-执行循环并处理故障。</p>
+            <p class="arch-detail-desc">执行层。管 Agent 的生老病死，调度任务，跑感知→决策→执行闭环，处理各种异常。</p>
             <div class="arch-detail-grid">
               <div class="arch-component">
                 <span class="comp-name">生命周期管理器</span>
-                <span class="comp-desc">初始化、启动、暂停、恢复、停止、重启状态机</span>
+                <span class="comp-desc">完整状态机：初始化、启动、暂停、恢复、停止、重启</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">任务调度器</span>
-                <span class="comp-desc">优先级感知调度，支持抢占和截止时间</span>
+                <span class="comp-desc">按优先级调度，可抢占，保 deadline</span>
               </div>
               <div class="arch-component">
-                <span class="comp-name">执行循环</span>
-                <span class="comp-desc">闭环感知-决策-执行，带超时保护</span>
+                <span class="comp-name">执行闭环</span>
+                <span class="comp-desc">感知→决策→执行，带超时兜底</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">故障处理器</span>
-                <span class="comp-desc">重试、回退、降级、停机 — 结构化恢复</span>
+                <span class="comp-desc">重试 → 回退 → 降级 → 停机，分级应对</span>
               </div>
             </div>
           </div>
 
           <div class="arch-detail" id="detail-embodiment">
             <h3>第 1 层：具身层</h3>
-            <p class="arch-detail-desc">硬件抽象层。将异构传感器、执行器和计算资源规范化为统一接口。</p>
+            <p class="arch-detail-desc">硬件抽象层。把五花八门的传感器、执行器和计算资源统一成标准接口。</p>
             <div class="arch-detail-grid">
               <div class="arch-component">
                 <span class="comp-name">传感器抽象</span>
-                <span class="comp-desc">相机、LiDAR、IMU、力/扭矩 — 统一数据格式</span>
+                <span class="comp-desc">相机、LiDAR、IMU、力/扭矩——统一数据格式</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">执行器接口</span>
-                <span class="comp-desc">机械臂、轮子、夹爪、腿 — 规范化控制 API</span>
+                <span class="comp-desc">臂、轮、爪、腿——统一控制 API</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">资源监控器</span>
-                <span class="comp-desc">CPU、GPU、内存、电池 — 实时资源追踪</span>
+                <span class="comp-desc">CPU、GPU、内存、电池——实时掌握资源状态</span>
               </div>
               <div class="arch-component">
                 <span class="comp-name">硬件注册中心</span>
-                <span class="comp-desc">能力发现和设备枚举</span>
+                <span class="comp-desc">自动发现设备，自动枚举能力</span>
               </div>
             </div>
           </div>
@@ -205,23 +205,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
 
         <div class="ros-text">
-          <h3>不同的层，不同的关注点</h3>
+          <h3>不同层，不同问题</h3>
           <p>
-            ROS 2 是通信中间件 — 处理节点间的消息传递。
-            AEROS 位于 ROS 2 之上，管理智能体如何被<em>运行</em>和<em>治理</em>。
+            ROS 2 是通信中间件，管节点之间怎么传消息。
+            AEROS 在 ROS 2 之上，管智能体怎么<em>跑</em>和怎么<em>治理</em>。
           </p>
           <p>
-            类比：<strong>Linux 之于 Kubernetes</strong> 正如 <strong>ROS 2 之于 AEROS</strong>。
-            Kubernetes 不是 Linux 插件 — 它是解决不同问题的不同抽象层。
-            AEROS 也不是 ROS 2 插件。
+            打个比方：<strong>Linux 和 Kubernetes</strong> 的关系，就像 <strong>ROS 2 和 AEROS</strong>。
+            Kubernetes 不是 Linux 的插件，而是在更高层解决不同的问题。
+            AEROS 也一样。
           </p>
           <div class="ros-comparison">
             <div>
-              <span class="ros-comp-label">ROS 2 管理</span>
+              <span class="ros-comp-label">ROS 2 管的</span>
               <span class="ros-comp-value">话题、服务、动作、节点、DDS 传输</span>
             </div>
             <div>
-              <span class="ros-comp-label">AEROS 管理</span>
+              <span class="ros-comp-label">AEROS 管的</span>
               <span class="ros-comp-value">Agent 生命周期、ECM 包、治理策略、审计链路</span>
             </div>
           </div>
@@ -234,37 +234,37 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">商业模式</div>
-      <h2 class="section-title">开放核心架构</h2>
+      <h2 class="section-title">开放核心，商业治理</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl);">
-        核心运行时开源。企业治理商业化。
+        核心运行时完全开源，企业级治理能力商业化。
       </p>
 
       <div class="core-stack">
         <div class="core-layer core-commercial">
           <div class="core-left">
             <span class="core-name">治理控制台</span>
-            <span class="core-desc">策略 DSL、监控器、审计、恢复编排</span>
+            <span class="core-desc">策略 DSL · 监控 · 审计 · 恢复编排</span>
           </div>
           <span class="core-license">企业许可</span>
         </div>
         <div class="core-layer core-open">
           <div class="core-left">
             <span class="core-name">ECM 包管理系统</span>
-            <span class="core-desc">标准格式、契约、版本控制、兼容性</span>
+            <span class="core-desc">标准格式 · 契约 · 版本管理 · 兼容性校验</span>
           </div>
           <span class="core-license license-open">Apache 2.0</span>
         </div>
         <div class="core-layer core-open">
           <div class="core-left">
             <span class="core-name">运行时核心</span>
-            <span class="core-desc">生命周期、调度、执行循环、故障恢复</span>
+            <span class="core-desc">生命周期 · 调度 · 执行闭环 · 故障恢复</span>
           </div>
           <span class="core-license license-open">Apache 2.0</span>
         </div>
       </div>
 
       <div class="core-rationale">
-        <p><strong>开放核心吸引开发者。</strong>治理产生企业收入。</p>
+        <p><strong>开源拉开发者，</strong>治理赚企业的钱。</p>
       </div>
     </div>
   </section>
@@ -272,9 +272,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- ═══ CTA ═══ -->
   <section class="section" style="text-align: center; border-top: 1px solid var(--border-subtle);">
     <div class="container">
-      <h2 class="section-title">阅读研究论文</h2>
+      <h2 class="section-title">看看背后的研究</h2>
       <p class="section-desc" style="margin: 0 auto var(--space-xl);">
-        七篇系统性论文涵盖 AEROS 背后的架构、治理、进化、契约、联邦化和基准测试。
+        7 篇系统性论文，覆盖 AEROS 的架构、治理、进化、契约、联邦化和基准测试。
       </p>
       <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
         <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-primary">查看研究计划</a>

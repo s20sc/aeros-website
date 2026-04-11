@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="AEROS — 具身智能体的运行时" lang="zh">
+<BaseLayout title="AEROS — 让具身智能体跑起来" lang="zh">
 
   <!-- ═══ Section 1: Hero ═══ -->
   <section class="hero grid-bg">
@@ -12,15 +12,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </h1>
       <p class="hero-sub">
         一个机器人，一个 Agent，一个 Runtime。<br>
-        为具身智能体构建可运行、可治理、可进化的基础设施。
+        让具身智能体真正跑起来——稳定运行、受控治理、持续进化。
       </p>
       <div class="hero-ctas">
         <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>
         <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-secondary">
-          在 GitHub 上查看 <span class="arrow">&rarr;</span>
+          GitHub 源码 <span class="arrow">&rarr;</span>
         </a>
       </div>
-      <p class="hero-badge">开源运行时核心 &middot; Apache 2.0</p>
+      <p class="hero-badge">运行时核心开源 &middot; Apache 2.0</p>
     </div>
   </section>
 
@@ -28,31 +28,31 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">行业缺口</div>
-      <h2 class="section-title">模型能思考，机器人能运动，<br>但智能体还跑不起来。</h2>
+      <h2 class="section-title">大模型会思考了，机器人能动了，<br>但智能体还是跑不起来。</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl)">
-        缺的是运行时层：让具身智能体在真实世界中稳定运行、安全执行、持续进化的基础设施。
+        差的就是那一层运行时——让智能体在真实世界里稳稳跑起来的系统底座。
       </p>
 
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-icon">&#x1D6CC;</div>
-          <h3>模型已经准备好面对物理世界</h3>
-          <p>基础模型已经能推理动作、物体和环境 — 但光有推理能力，不等于智能体能真正运行。</p>
+          <h3>模型够强了，但不够用</h3>
+          <p>大模型已经能理解动作、物体和环境。但能推理不等于能执行，智能体光靠模型跑不起来。</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">&#x25C7;</div>
-          <h3>机器人硬件日益异构化</h3>
-          <p>人形、四足、AMR、协作臂都在规模化 — 对共享运行时层的需求越来越迫切。</p>
+          <h3>硬件百花齐放，软件各自为政</h3>
+          <p>人形、四足、AMR、协作臂纷纷量产。形态越来越多，但缺一个通用的运行时把它们管起来。</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">&#x25B3;</div>
-          <h3>真实部署改变了需求</h3>
-          <p>一旦智能体走出实验室，可靠性、故障恢复、安全性和治理就成为系统级需求。</p>
+          <h3>出了实验室，规则全变了</h3>
+          <p>智能体一旦到了真实场景，稳定性、故障恢复、安全合规、行为审计全都变成刚需。</p>
         </div>
       </div>
 
       <div class="problem-conclusion">
-        <p>真正缺失的是让智能体<strong>可运行、可治理、可规模化</strong>的运行时。</p>
+        <p>行业真正缺的，是让智能体<strong>跑得稳、管得住、规模化得了</strong>的运行时。</p>
       </div>
     </div>
   </section>
@@ -61,9 +61,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section section-alt">
     <div class="container">
       <div class="section-label">核心能力</div>
-      <h2 class="section-title">三层运行时基础设施</h2>
+      <h2 class="section-title">三层运行时，一套完整体系</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl)">
-        AEROS 不是一个工具 — 它是一个治理具身智能体全生命周期的运行时平台。
+        AEROS 不是一个工具库——而是管理具身智能体整个生命周期的运行时平台。
       </p>
 
       <div class="capability-grid">
@@ -74,9 +74,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <li>生命周期管理</li>
             <li>状态持久化</li>
             <li>任务调度</li>
-            <li>执行循环</li>
+            <li>执行闭环</li>
             <li>故障恢复</li>
-            <li>分布式追踪</li>
+            <li>全链路追踪</li>
           </ul>
           <span class="capability-link">了解更多 &rarr;</span>
         </a>
@@ -86,11 +86,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <h3>ECM 包管理系统</h3>
           <ul>
             <li>标准 ECM 格式</li>
-            <li>安装 / 升级 / 回滚</li>
-            <li>语义版本控制</li>
+            <li>安装 · 升级 · 回滚</li>
+            <li>语义化版本管理</li>
             <li>六维能力契约</li>
-            <li>兼容性检查</li>
-            <li>影子模式部署</li>
+            <li>兼容性校验</li>
+            <li>影子模式验证</li>
           </ul>
           <span class="capability-link">了解更多 &rarr;</span>
         </a>
@@ -100,11 +100,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <h3>治理控制台</h3>
           <ul>
             <li>策略 DSL</li>
-            <li>监控器引擎</li>
-            <li>结构化恢复</li>
+            <li>实时监控引擎</li>
+            <li>分级恢复机制</li>
             <li>完整审计链路</li>
-            <li>冲突检测</li>
-            <li>版本回滚</li>
+            <li>策略冲突检测</li>
+            <li>一键版本回滚</li>
           </ul>
           <span class="capability-link">了解更多 &rarr;</span>
         </a>
@@ -116,42 +116,42 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">定位</div>
-      <h2 class="section-title">不是另一个机器人操作系统</h2>
+      <h2 class="section-title">不是又一个机器人 OS</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl)">
-        ROS 2 管理通信。AEROS 管理智能体如何运行和被治理。<br>
-        就像 Kubernetes 之于 Linux — 不同的层，不同的关注点。
+        ROS 2 管通信，AEROS 管智能体怎么跑、怎么管。<br>
+        就像 Kubernetes 和 Linux——不同的层，解决不同的问题。
       </p>
 
       <div class="comparison-table">
         <div class="comparison-header">
-          <span>传统机器人操作系统</span>
+          <span>传统机器人 OS</span>
           <span>AEROS</span>
         </div>
         <div class="comparison-row">
-          <span>管理设备通信</span>
-          <span>管理智能体执行</span>
+          <span>管设备通信</span>
+          <span>管智能体执行</span>
         </div>
         <div class="comparison-row">
           <span>节点 + 消息</span>
           <span>Agent + ECM + 策略</span>
         </div>
         <div class="comparison-row">
-          <span>一次部署</span>
-          <span>持续运行 + 进化</span>
+          <span>部署一次就不管了</span>
+          <span>持续运行 · 持续进化</span>
         </div>
         <div class="comparison-row">
-          <span>无审计链路</span>
+          <span>出事了查不到</span>
           <span>全链路可追溯</span>
         </div>
         <div class="comparison-row">
-          <span>静态能力</span>
-          <span>可治理的能力进化</span>
+          <span>能力写死不能改</span>
+          <span>能力可插拔、可治理</span>
         </div>
       </div>
 
       <p class="comparison-footnote">
-        ROS 2 处理通信。AEROS 处理智能体如何被<em>运行</em>和<em>治理</em>。<br>
-        Kubernetes 不是 Linux 插件。AEROS 也不是 ROS 2 插件。
+        ROS 2 解决通信问题。AEROS 解决智能体的<em>运行</em>和<em>治理</em>问题。<br>
+        Kubernetes 不是 Linux 的插件，AEROS 也不是 ROS 2 的插件。
       </p>
     </div>
   </section>
@@ -166,43 +166,43 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="arch-stack">
           <div class="arch-layer">
             <span class="arch-name">第 5 层：Agent</span>
-            <span class="arch-desc">应用逻辑与决策</span>
+            <span class="arch-desc">决策 · 推理</span>
           </div>
           <div class="arch-arrow">&darr;</div>
           <div class="arch-layer arch-governance">
             <span class="arch-name">第 4 层：治理</span>
-            <span class="arch-desc">策略执行与审计</span>
+            <span class="arch-desc">策略 · 审计</span>
           </div>
           <div class="arch-arrow">&darr;</div>
           <div class="arch-layer">
             <span class="arch-name">第 3 层：ECM 包</span>
-            <span class="arch-desc">能力模块与契约</span>
+            <span class="arch-desc">能力 · 契约</span>
           </div>
           <div class="arch-arrow">&darr;</div>
           <div class="arch-layer">
             <span class="arch-name">第 2 层：运行时</span>
-            <span class="arch-desc">生命周期、调度、执行</span>
+            <span class="arch-desc">调度 · 执行</span>
           </div>
           <div class="arch-arrow">&darr;</div>
           <div class="arch-layer">
             <span class="arch-name">第 1 层：具身层</span>
-            <span class="arch-desc">硬件抽象与传感器</span>
+            <span class="arch-desc">硬件 · 传感器</span>
           </div>
         </div>
 
         <div class="arch-text">
-          <h3>治理作为<br><em>一等原语</em></h3>
+          <h3>治理，<br><em>从第一行代码开始</em></h3>
           <p>
-            传统机器人中间件将治理视为事后补丁 — 部署之后才加上的监控层。
-            AEROS 让治理成为运行时原语。每一次能力调用在到达硬件之前都会经过治理引擎。
+            传统机器人中间件把治理当补丁——部署完了再加监控。
+            AEROS 不一样。治理是运行时的一等原语，每次能力调用到达硬件前，都得先过治理引擎。
           </p>
           <p>
-            结果：智能体在架构层面就是安全的，而非靠希望。
-            能力进化是可控的，而非混乱的。
-            审计链路是完整的，而非采样的。
+            结果：安全是架构保证的，不是靠祈祷。
+            能力升级是受控的，不是听天由命。
+            审计链路是完整的，不是抽样的。
           </p>
           <a href="/zh/technology" class="btn btn-secondary">
-            阅读架构详情 <span class="arrow">&rarr;</span>
+            深入架构设计 <span class="arrow">&rarr;</span>
           </a>
         </div>
       </div>
@@ -212,24 +212,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- ═══ Section 6: Trust Signals ═══ -->
   <section class="section">
     <div class="container">
-      <div class="section-label">研究基础</div>
-      <h2 class="section-title">系统性的学术基础</h2>
+      <div class="section-label">学术根基</div>
+      <h2 class="section-title">不是拍脑袋做的</h2>
 
       <div class="trust-grid">
         <div class="trust-card">
           <div class="trust-number">7</div>
           <div class="trust-label">篇论文</div>
-          <div class="trust-desc">系统性研究计划，涵盖运行时、治理、进化、契约、联邦化和基准测试</div>
+          <div class="trust-desc">系统性研究，覆盖运行时、治理、进化、契约、联邦化、基准测试</div>
         </div>
         <div class="trust-card">
           <div class="trust-number">4</div>
           <div class="trust-label">篇 arXiv 预印本</div>
-          <div class="trust-desc">公开可用，接受同行评审和学术审查</div>
+          <div class="trust-desc">全部公开，接受同行评审和学术检验</div>
         </div>
         <div class="trust-card">
           <div class="trust-number">1</div>
           <div class="trust-label">个开源 MVP</div>
-          <div class="trust-desc">运行时核心以 Apache 2.0 许可证开源</div>
+          <div class="trust-desc">运行时核心 Apache 2.0 开源，拿来就能用</div>
         </div>
       </div>
 
@@ -244,11 +244,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- ═══ Section 7: CTA ═══ -->
   <section class="cta-section grid-bg">
     <div class="container" style="text-align: center">
-      <h2 class="cta-title">准备好让你的<br>机器人系统<em>可治理</em>了吗？</h2>
-      <p class="cta-desc">了解 AEROS 如何为你的具身智能体带来治理、进化和安全能力。</p>
+      <h2 class="cta-title">让你的机器人<br>真正<em>可治理</em></h2>
+      <p class="cta-desc">看看 AEROS 怎样让你的具身智能体跑得更稳、管得更好、进化得更快。</p>
       <div class="cta-buttons">
         <a href="/zh/contact" class="btn btn-primary">预约 Demo</a>
-        <a href="/zh/open-source" class="btn btn-secondary">阅读文档</a>
+        <a href="/zh/open-source" class="btn btn-secondary">查看文档</a>
         <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-ghost">
           加入社区 <span class="arrow">&rarr;</span>
         </a>

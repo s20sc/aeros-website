@@ -2,24 +2,24 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="联系我们 — AEROS" description="预约演示、探讨合作机会，或加入 AEROS 开源社区。" lang="zh">
+<BaseLayout title="联系我们 — AEROS" description="预约 Demo、聊聊合作，或加入 AEROS 开源社区。" lang="zh">
 
   <section class="contact-page section">
     <div class="container">
       <div class="section-label">联系我们</div>
-      <h1 class="page-title">取得联系</h1>
+      <h1 class="page-title">聊一聊</h1>
       <p class="page-desc">
-        预约技术演示、探讨合作机会，或加入我们的开源社区。
+        预约技术 Demo、探讨合作，或直接加入开源社区。
       </p>
 
       <div class="contact-grid">
         <!-- Form -->
         <div class="contact-form-wrapper">
           <h2 class="form-heading">预约 Demo</h2>
-          <p class="form-sub">体验 AEROS 的实际运行。我们将带你了解运行时、ECM 系统和治理控制台。</p>
+          <p class="form-sub">看 AEROS 实际跑起来的样子。我们带你过一遍运行时、ECM 系统和治理控制台。</p>
 
           <form class="contact-form" id="contact-form" action="https://formspree.io/f/xrgndojd" method="POST">
-            <input type="hidden" name="_subject" value="AEROS 网站新联系表单">
+            <input type="hidden" name="_subject" value="AEROS 网站联系表单">
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="name">姓名</label>
@@ -37,52 +37,52 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="role">我是...</label>
+              <label class="form-label" for="role">你的角色</label>
               <select id="role" name="role" class="form-input form-select">
-                <option value="" disabled selected>选择您的角色</option>
+                <option value="" disabled selected>选一个最接近的</option>
                 <option value="investor">投资人</option>
-                <option value="enterprise">企业 / 潜在客户</option>
-                <option value="developer">开发者 / 贡献者</option>
-                <option value="researcher">研究人员 / 学术界</option>
-                <option value="partner">合作伙伴咨询</option>
+                <option value="enterprise">企业客户</option>
+                <option value="developer">开发者</option>
+                <option value="researcher">研究人员</option>
+                <option value="partner">合作伙伴</option>
                 <option value="other">其他</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="message">描述您的使用场景</label>
+              <label class="form-label" for="message">说说你的场景</label>
               <textarea id="message" name="message" class="form-input form-textarea" rows="4"
-                placeholder="您正在使用什么样的机器人或智能体？您想解决什么问题？"></textarea>
+                placeholder="你在用什么机器人？想解决什么问题？"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-full">发送消息</button>
-            <p class="form-note">我们通常在 24 小时内回复。</p>
+            <p class="form-note">通常 24 小时内回复。</p>
           </form>
         </div>
 
         <!-- Sidebar -->
         <div class="contact-sidebar">
           <div class="contact-card">
-            <h3>商业咨询</h3>
-            <p>企业许可、合作伙伴关系和商业部署。</p>
-            <span class="contact-link">请使用左侧表单</span>
+            <h3>商业合作</h3>
+            <p>企业许可、合作伙伴、商业部署。</p>
+            <span class="contact-link">请填左侧表单</span>
           </div>
 
           <div class="contact-card">
-            <h3>投资者关系</h3>
-            <p>商业计划书、BP 和融资沟通。</p>
-            <span class="contact-link">请使用左侧表单</span>
+            <h3>投资人</h3>
+            <p>BP、融资沟通。</p>
+            <span class="contact-link">请填左侧表单</span>
           </div>
 
           <div class="contact-card">
             <h3>开发者社区</h3>
-            <p>问题咨询、Bug 报告、功能建议和贡献。</p>
+            <p>技术问题、Bug 反馈、功能建议、贡献代码。</p>
             <a href="https://github.com/s20sc/aeros-runtime/discussions" target="_blank" rel="noopener" class="contact-link">GitHub Discussions</a>
           </div>
 
           <div class="contact-card">
-            <h3>研究合作</h3>
-            <p>学术合作和联合研究机会。</p>
+            <h3>学术合作</h3>
+            <p>联合研究、学术合作。</p>
             <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="contact-link">研究计划 &rarr;</a>
           </div>
 
