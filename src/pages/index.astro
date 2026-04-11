@@ -56,20 +56,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 4: What AEROS Is ═══ -->
+  <!-- ═══ Section 4: How AEROS Works ═══ -->
   <section class="section section-alt">
-    <div class="container">
-      <div class="section-label">What Is AEROS</div>
-      <h2 class="section-title">AEROS is the governed runtime layer for embodied agents.</h2>
-      <p class="section-desc" style="margin-bottom: var(--space-xl)">
-        AEROS sits between embodied intelligence and real-world execution. It does not replace models, robot middleware, or hardware control systems. It governs how persistent embodied agents are admitted, executed, supervised, evolved, and audited.
-      </p>
-      <p class="highlight-line">AEROS does not decide what the agent wants. It governs how the agent is allowed to run.</p>
-    </div>
-  </section>
-
-  <!-- ═══ Section 5: How AEROS Works ═══ -->
-  <section class="section">
     <div class="container">
       <div class="section-label">How It Works</div>
       <h2 class="section-title">How AEROS works</h2>
@@ -136,40 +124,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 6: Three Core Layers ═══ -->
-  <section class="section section-alt">
+  <!-- ═══ Section 5: Three Core Layers ═══ -->
+  <section class="section">
     <div class="container">
       <div class="section-label">Core Layers</div>
-      <h2 class="section-title">Three core layers for embodied runtime</h2>
+      <h2 class="section-title">Three layers that make embodied agents deployable</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl)"></p>
 
       <div class="capability-grid">
         <a href="/product" class="capability-card">
           <div class="capability-tag">Apache 2.0</div>
           <h3>Runtime Core</h3>
-          <p class="capability-desc">The execution substrate for persistent embodied agents. Manages lifecycle, scheduling, state continuity, execution flow, and runtime supervision.</p>
+          <p class="capability-desc">Persistent execution, lifecycle control, state continuity, and supervision.</p>
           <span class="capability-link">Learn more &rarr;</span>
         </a>
 
         <a href="/product#ecm" class="capability-card">
           <div class="capability-tag">Apache 2.0</div>
-          <h3>ECM / Capability Packaging</h3>
-          <p class="capability-desc">Encapsulates embodied capabilities as modular, installable, evolvable runtime units. Supports controlled composition, reuse, and capability evolution across tasks and robot embodiments.</p>
+          <h3>ECM Package System</h3>
+          <p class="capability-desc">Installable embodied capabilities with structured contracts and controlled evolution.</p>
           <span class="capability-link">Learn more &rarr;</span>
         </a>
 
         <a href="/product#governance" class="capability-card capability-card--commercial">
           <div class="capability-tag tag-commercial">Enterprise</div>
           <h3>Governance Layer</h3>
-          <p class="capability-desc">Makes runtime control a first-class system property. Applies contracts, permissions, policies, monitoring, rollback, and auditability across the full execution chain.</p>
+          <p class="capability-desc">Policy enforcement, admission control, monitoring, rollback, and auditability.</p>
           <span class="capability-link">Learn more &rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Section 7: Not Another Robot OS ═══ -->
-  <section class="section">
+  <!-- ═══ Section 6: Not Another Robot OS ═══ -->
+  <section class="section section-alt">
     <div class="container">
       <div class="section-label">Positioning</div>
       <h2 class="section-title">Not another Robot OS</h2>
@@ -213,38 +201,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 8: What AEROS Is / Is Not ═══ -->
-  <section class="section section-alt">
+  <!-- ═══ Section 7: Use Case Preview ═══ -->
+  <section class="section">
     <div class="container">
-      <div class="section-label">Clarity</div>
-      <h2 class="section-title">What AEROS is — and is not</h2>
+      <div class="section-label">Use Cases</div>
+      <h2 class="section-title">Built for real embodied deployment scenarios</h2>
 
-      <div class="is-isnot-grid">
-        <div class="is-column">
-          <h3 class="is-isnot-heading is-heading">AEROS is</h3>
-          <ul class="is-list">
-            <li><span class="check-icon">&#x2713;</span> A governed runtime for persistent embodied agents</li>
-            <li><span class="check-icon">&#x2713;</span> A capability execution and evolution layer</li>
-            <li><span class="check-icon">&#x2713;</span> A supervision, recovery, and policy enforcement system</li>
-            <li><span class="check-icon">&#x2713;</span> An audit and control plane for embodied AI deployment</li>
-          </ul>
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <h3>Humanoids</h3>
+          <p>Run persistent embodied agents with governed skill execution, lifecycle control, and safe capability evolution.</p>
+          <a href="/use-cases" class="capability-link">Learn more &rarr;</a>
         </div>
-        <div class="isnot-column">
-          <h3 class="is-isnot-heading isnot-heading">AEROS is not</h3>
-          <ul class="isnot-list">
-            <li><span class="x-icon">&#x2717;</span> Not another robot middleware</li>
-            <li><span class="x-icon">&#x2717;</span> Not a hardware driver framework</li>
-            <li><span class="x-icon">&#x2717;</span> Not just a model-serving stack</li>
-            <li><span class="x-icon">&#x2717;</span> Not a demo orchestration toy</li>
-            <li><span class="x-icon">&#x2717;</span> Not a ROS plugin</li>
-          </ul>
+        <div class="usecase-card">
+          <h3>Mobile Manipulation</h3>
+          <p>Coordinate navigation, perception, and manipulation under a unified runtime with monitoring and recovery.</p>
+          <a href="/use-cases" class="capability-link">Learn more &rarr;</a>
+        </div>
+        <div class="usecase-card">
+          <h3>Industrial &amp; Enterprise</h3>
+          <p>Add policy enforcement, rollout control, and auditability to production robot-agent workflows.</p>
+          <a href="/use-cases" class="capability-link">Learn more &rarr;</a>
+        </div>
+        <div class="usecase-card">
+          <h3>Cross-Embodiment</h3>
+          <p>Reuse runtime logic across robot forms without rebuilding the full agent stack for every embodiment.</p>
+          <a href="/use-cases" class="capability-link">Learn more &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Section 9: Five-Layer Architecture ═══ -->
-  <section class="section">
+  <!-- ═══ Section 8: Five-Layer Architecture ═══ -->
+  <section class="section section-alt">
     <div class="container">
       <div class="section-label">Architecture</div>
       <h2 class="section-title">A five-layer architecture for embodied runtime</h2>
@@ -298,38 +287,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 10: Use Cases ═══ -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-label">Use Cases</div>
-      <h2 class="section-title">Built for real embodied deployment scenarios</h2>
-
-      <div class="usecase-grid">
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F916;</div>
-          <h3>Humanoids</h3>
-          <p>Run persistent embodied agents with governed skill execution, lifecycle control, and safe capability evolution.</p>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F9BE;</div>
-          <h3>Mobile Manipulation</h3>
-          <p>Coordinate navigation, perception, and manipulation under a unified runtime with monitoring and recovery.</p>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F3ED;</div>
-          <h3>Industrial &amp; Enterprise</h3>
-          <p>Add policy enforcement, rollout control, and auditability to production robot-agent workflows.</p>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F504;</div>
-          <h3>Cross-Embodiment</h3>
-          <p>Reuse runtime logic across robot forms without rebuilding the full agent stack for every embodiment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ Section 11: What Exists Today ═══ -->
+  <!-- ═══ Section 9: What Exists Today ═══ -->
   <section class="section">
     <div class="container">
       <div class="section-label">Proof</div>
@@ -347,7 +305,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 12: Research ═══ -->
+  <!-- ═══ Section 10: Research ═══ -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-label">Research</div>
@@ -364,7 +322,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 13: CTA by Audience ═══ -->
+  <!-- ═══ Section 11: CTA by Audience ═══ -->
   <section class="section grid-bg">
     <div class="container">
       <div class="section-label">Get Started</div>
@@ -397,7 +355,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 14: Brand Line ═══ -->
+  <!-- ═══ Brand Line ═══ -->
   <section class="brand-line">
     <div class="container">
       <p class="brand-text">The governed runtime for embodied agents.</p>

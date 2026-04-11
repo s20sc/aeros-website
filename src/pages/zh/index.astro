@@ -57,20 +57,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 4: What AEROS Is ═══ -->
+  <!-- ═══ Section 4: How AEROS Works ═══ -->
   <section class="section section-alt">
-    <div class="container">
-      <div class="section-label">AEROS 是什么</div>
-      <h2 class="section-title">AEROS 是具身智能体的治理运行时层。</h2>
-      <p class="section-desc" style="margin-bottom: var(--space-xl)">
-        AEROS 处在具身智能和真实世界执行之间。它不替代模型、不替代机器人中间件、不替代硬件控制。它管的是：持久化的具身 Agent 怎么准入、怎么执行、怎么监管、怎么进化、怎么审计。
-      </p>
-      <p class="highlight-line">AEROS 不决定智能体想做什么。它管的是，智能体被允许怎么跑。</p>
-    </div>
-  </section>
-
-  <!-- ═══ Section 5: How AEROS Works ═══ -->
-  <section class="section">
     <div class="container">
       <div class="section-label">运行机制</div>
       <h2 class="section-title">AEROS 怎么工作</h2>
@@ -137,7 +125,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 6: Three Core Layers ═══ -->
+  <!-- ═══ Section 5: Three Core Layers ═══ -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-label">核心能力</div>
@@ -169,7 +157,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 7: Not Another Robot OS ═══ -->
+  <!-- ═══ Section 6: Not Another Robot OS ═══ -->
   <section class="section">
     <div class="container">
       <div class="section-label">定位</div>
@@ -214,38 +202,39 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 8: What AEROS Is / Is Not ═══ -->
-  <section class="section section-alt">
+  <!-- ═══ Section 7: Use Case Preview ═══ -->
+  <section class="section">
     <div class="container">
-      <div class="section-label">边界</div>
-      <h2 class="section-title">AEROS 是什么，不是什么</h2>
+      <div class="section-label">落地场景</div>
+      <h2 class="section-title">为真实具身部署场景而生</h2>
 
-      <div class="is-isnot-grid">
-        <div class="is-column">
-          <h3 class="is-isnot-heading is-heading">AEROS 是</h3>
-          <ul class="is-list">
-            <li><span class="check-icon">&#x2713;</span> 持久化具身 Agent 的治理运行时</li>
-            <li><span class="check-icon">&#x2713;</span> 能力执行与演进的基础层</li>
-            <li><span class="check-icon">&#x2713;</span> 监管、恢复与策略执行系统</li>
-            <li><span class="check-icon">&#x2713;</span> 具身 AI 部署的审计与管控面</li>
-          </ul>
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <h3>人形机器人</h3>
+          <p>运行持久化具身 Agent，治理技能执行、生命周期管控、安全能力演进。</p>
+          <a href="/zh/use-cases" class="capability-link">了解更多 &rarr;</a>
         </div>
-        <div class="isnot-column">
-          <h3 class="is-isnot-heading isnot-heading">AEROS 不是</h3>
-          <ul class="isnot-list">
-            <li><span class="x-icon">&#x2717;</span> 不是又一个机器人中间件</li>
-            <li><span class="x-icon">&#x2717;</span> 不是硬件驱动框架</li>
-            <li><span class="x-icon">&#x2717;</span> 不只是模型推理栈</li>
-            <li><span class="x-icon">&#x2717;</span> 不是 Demo 编排玩具</li>
-            <li><span class="x-icon">&#x2717;</span> 不是 ROS 插件</li>
-          </ul>
+        <div class="usecase-card">
+          <h3>移动操作</h3>
+          <p>在统一运行时下协调导航、感知和操作，配合监控与故障恢复。</p>
+          <a href="/zh/use-cases" class="capability-link">了解更多 &rarr;</a>
+        </div>
+        <div class="usecase-card">
+          <h3>工业与企业</h3>
+          <p>给生产环境的机器人工作流加上策略执行、灰度发布和审计追溯。</p>
+          <a href="/zh/use-cases" class="capability-link">了解更多 &rarr;</a>
+        </div>
+        <div class="usecase-card">
+          <h3>跨构型复用</h3>
+          <p>运行时逻辑跨机型复用，不用每换一种机器人就重建整套 Agent 栈。</p>
+          <a href="/zh/use-cases" class="capability-link">了解更多 &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Section 9: Five-Layer Architecture ═══ -->
-  <section class="section">
+  <!-- ═══ Section 8: Five-Layer Architecture ═══ -->
+  <section class="section section-alt">
     <div class="container">
       <div class="section-label">架构</div>
       <h2 class="section-title">五层运行时架构</h2>
@@ -299,38 +288,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 10: Use Cases ═══ -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-label">落地场景</div>
-      <h2 class="section-title">为真实具身部署场景而生</h2>
-
-      <div class="usecase-grid">
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F916;</div>
-          <h3>人形机器人</h3>
-          <p>跑持久化具身 Agent，能力执行受治理管控，生命周期可管、能力进化可控。</p>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F9BE;</div>
-          <h3>移动操作</h3>
-          <p>在统一运行时下协调导航、感知和操作，带监控和恢复。</p>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F3ED;</div>
-          <h3>工业与企业</h3>
-          <p>给生产机器人 Agent 工作流加上策略约束、灰度发布和审计能力。</p>
-        </div>
-        <div class="usecase-card">
-          <div class="usecase-icon">&#x1F504;</div>
-          <h3>跨形态迁移</h3>
-          <p>运行时逻辑跨机器人形态复用，不用每换一种机器人就重建整套 Agent 栈。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ Section 11: What Exists Today ═══ -->
+  <!-- ═══ Section 9: What Exists Today ═══ -->
   <section class="section">
     <div class="container">
       <div class="section-label">已有成果</div>
@@ -348,7 +306,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 12: Research ═══ -->
+  <!-- ═══ Section 10: Research ═══ -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-label">学术根基</div>
@@ -365,7 +323,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 13: CTA by Audience ═══ -->
+  <!-- ═══ Section 11: CTA by Audience ═══ -->
   <section class="section grid-bg">
     <div class="container">
       <div class="section-label">开始</div>
@@ -398,7 +356,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Section 14: Brand Line ═══ -->
+  <!-- ═══ Brand Line ═══ -->
   <section class="brand-line">
     <div class="container">
       <p class="brand-text">具身智能体的治理运行时。</p>
