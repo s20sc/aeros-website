@@ -25,16 +25,16 @@
   <line x1="360" y1="108" x2="360" y2="134" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <!-- LAYER 2: Upper Cognition -->
-  <rect x="60" y="138" width="600" height="86" rx="12" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5" stroke-opacity="0.5"/>
-  <text x="360" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#334155" letter-spacing="0.5">
+  <rect x="60" y="138" width="600" height="86" rx="12" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="360" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#6D28D9" letter-spacing="0.5">
     UPPER COGNITION &#x2014; Agent / Planner / Model
   </text>
 
-  <rect x="80" y="170" width="260" height="40" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" stroke-opacity="0.4"/>
-  <text x="210" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">OpenClaw Agent</text>
+  <rect x="80" y="170" width="260" height="40" rx="8" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="210" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#5B21B6">OpenClaw Agent</text>
 
-  <rect x="380" y="170" width="260" height="40" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" stroke-opacity="0.4"/>
-  <text x="510" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Other Planner / Model</text>
+  <rect x="380" y="170" width="260" height="40" rx="8" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="510" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#5B21B6">Other Planner / Model</text>
 
   <!-- Arrow with label -->
   <line x1="360" y1="224" x2="360" y2="260" stroke="#CBD5E1" stroke-width="1.5" marker-end="url(#arrow)"/>
@@ -73,16 +73,16 @@
   <text x="360" y="421" text-anchor="middle" font-size="9" font-weight="500" fill="#94A3B8">Controlled Execution</text>
 
   <!-- LAYER 4: ROS 2 / Robot -->
-  <rect x="60" y="436" width="600" height="76" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-  <text x="360" y="458" text-anchor="middle" font-size="12" font-weight="700" fill="#64748B" letter-spacing="0.5">
+  <rect x="60" y="436" width="600" height="76" rx="12" fill="#F0FDFA" stroke="#00C2A8" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="360" y="458" text-anchor="middle" font-size="12" font-weight="700" fill="#0D9488" letter-spacing="0.5">
     ROS 2 / ROBOT / FLEET
   </text>
 
   <rect x="80" y="466" width="260" height="34" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
-  <text x="210" y="488" text-anchor="middle" font-size="11" font-weight="500" fill="#64748B">ROS 2 / Physical Robot</text>
+  <text x="210" y="488" text-anchor="middle" font-size="11" font-weight="500" fill="#0F766E">ROS 2 / Physical Robot</text>
 
   <rect x="380" y="466" width="260" height="34" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
-  <text x="510" y="488" text-anchor="middle" font-size="11" font-weight="500" fill="#64748B">Fleet Operations</text>
+  <text x="510" y="488" text-anchor="middle" font-size="11" font-weight="500" fill="#0F766E">Fleet Operations</text>
 
   <!-- Bottom quote -->
   <line x1="120" y1="528" x2="600" y2="528" stroke="#E2E8F0" stroke-width="1"/>
