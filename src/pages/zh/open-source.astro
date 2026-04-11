@@ -9,8 +9,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="section-label">开源生态</div>
       <h1 class="page-title">开放构建，透明演进</h1>
       <p class="page-desc">
-        运行时核心和 ECM 包管理系统，Apache 2.0 许可。
-        随便用、随便 fork、欢迎贡献。
+        60 秒跑起来。看架构源码。贡献能力模块。
       </p>
     </div>
   </section>
@@ -21,6 +20,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="section-label">代码仓库</div>
       <h2 class="section-title">代码在这里</h2>
 
+      <h3 class="repo-group-label">已上线</h3>
       <div class="repo-grid">
         <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="repo-card">
           <div class="repo-header">
@@ -46,7 +46,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <span>arXiv</span>
           </div>
         </a>
+      </div>
 
+      <h3 class="repo-group-label repo-group-coming">即将推出</h3>
+      <div class="repo-grid repo-grid-coming">
         <div class="repo-card repo-planned">
           <div class="repo-header">
             <span class="repo-name">s20sc/aeros-contracts</span>
@@ -100,10 +103,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <span class="dot green"></span>
             <span class="terminal-title">terminal</span>
           </div>
-<pre class="terminal-body"><span class="comment"># 安装 AEROS</span>
+<pre class="terminal-body"><span class="comment"># Install AEROS</span>
 <span class="prompt">$</span> <span class="cmd">pip install aeros</span>
 
-<span class="comment"># 运行演示</span>
+<span class="comment"># Run the demo</span>
 <span class="prompt">$</span> <span class="cmd">aeros demo</span>
 <span class="ok">&#10003; Runtime started on port 8420</span>
 <span class="ok">&#10003; Demo agent: arm-sim-01</span>
@@ -111,7 +114,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <span class="ok">&#10003; Governance: sandbox mode</span>
 <span class="out">  Open localhost:8420 for dashboard</span>
 
-<span class="comment"># 或探索 CLI</span>
+<span class="comment"># Or explore the CLI</span>
 <span class="prompt">$</span> <span class="cmd">aeros --help</span></pre>
         </div>
       </div>
@@ -203,7 +206,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-color: rgba(0, 102, 255, 0.3);
     transform: translateY(-2px);
   }
-  .repo-planned { opacity: 0.6; }
+  .repo-group-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .repo-group-coming {
+    margin-top: var(--space-xl);
+    color: var(--text-muted);
+  }
+  .repo-grid-coming {
+    opacity: 0.55;
+  }
+  .repo-planned { opacity: 1; }
   .repo-planned:hover { transform: none; border-color: var(--border); }
 
   .repo-header {

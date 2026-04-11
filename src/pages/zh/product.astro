@@ -9,9 +9,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <div class="container">
       <div class="section-label">产品</div>
       <h1 class="page-title">不是工具库。<br>是运行时平台。</h1>
+      <p class="page-subtitle">别再给每个项目重造运行时脚手架了。</p>
       <p class="page-desc">
-        不是让你 import 的 SDK，而是让具身智能体跑起来、管起来、进化下去的基础设施。
+        AEROS 不是让你 import 的 SDK，而是让具身智能体跑起来、管起来、进化下去的基础设施层——开箱即用。
       </p>
+    </div>
+  </section>
+
+  <!-- ═══ Section: Who this is for ═══ -->
+  <section class="section section-alt" id="audience">
+    <div class="container">
+      <div class="section-label">目标用户</div>
+      <h2 class="section-title">给谁用的</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3 class="audience-role">机器人 OEM</h3>
+          <p>用标准化的治理运行时加速产品交付，别再给每个客户重搭脚手架。</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-role">车队运营商</h3>
+          <p>异构机器人车队统一管理：生命周期管控、策略执行、行为审计，一个运行时搞定。</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-role">企业机器人团队</h3>
+          <p>给生产环境的机器人 Agent 工作流加上治理、回滚和审计能力。</p>
+        </div>
+        <div class="audience-card">
+          <h3 class="audience-role">研发工程师</h3>
+          <p>在有真正执行管控的开源运行时上做原型，别再用 Demo 脚本凑合。</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -200,11 +227,54 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ═══ Section: What changes after AEROS ═══ -->
+  <section class="section" id="before-after">
+    <div class="container">
+      <div class="section-label">效果</div>
+      <h2 class="section-title">有了 AEROS 之后</h2>
+      <div class="comparison-table">
+        <div class="comparison-row">
+          <div class="comparison-before">
+            <span class="comparison-label">之前</span>
+            <p>每个项目都从头搭运行时脚手架</p>
+          </div>
+          <div class="comparison-arrow">&rarr;</div>
+          <div class="comparison-after">
+            <span class="comparison-label">之后</span>
+            <p>一套治理运行时，跨项目复用</p>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-before">
+            <span class="comparison-label">之前</span>
+            <p>升级能力 = 赌一把</p>
+          </div>
+          <div class="comparison-arrow">&rarr;</div>
+          <div class="comparison-after">
+            <span class="comparison-label">之后</span>
+            <p>影子模式验证 + 秒级回滚</p>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-before">
+            <span class="comparison-label">之前</span>
+            <p>出事了手动复盘</p>
+          </div>
+          <div class="comparison-arrow">&rarr;</div>
+          <div class="comparison-after">
+            <span class="comparison-label">之后</span>
+            <p>全链路审计，每个决策都有记录</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ Section 5: Roadmap ═══ -->
-  <section class="section">
+  <section class="section roadmap-section" id="roadmap">
     <div class="container">
       <div class="section-label">路线图</div>
-      <h2 class="section-title">我们在哪里，要去哪里</h2>
+      <h2 class="section-title roadmap-title">我们在往哪走</h2>
 
       <div class="roadmap">
         <div class="roadmap-item roadmap-done">
@@ -427,6 +497,86 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-bottom: 1px solid var(--border-subtle);
   }
 
+  /* ═══ Page Subtitle ═══ */
+  .page-subtitle {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.01em;
+  }
+
+  /* ═══ Audience Grid ═══ */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+  .audience-card {
+    padding: var(--space-xl);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+  }
+  .audience-role {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .audience-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ═══ Before/After Comparison ═══ */
+  .comparison-table {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+  .comparison-before, .comparison-after {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+  }
+  .comparison-before {
+    background: var(--bg-elevated);
+    border-left: 3px solid var(--text-muted);
+  }
+  .comparison-after {
+    background: var(--bg-elevated);
+    border-left: 3px solid var(--success);
+  }
+  .comparison-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-xs);
+  }
+  .comparison-before .comparison-label { color: var(--text-muted); }
+  .comparison-after .comparison-label { color: var(--success); }
+  .comparison-before p, .comparison-after p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .comparison-after p { color: var(--text-primary); }
+  .comparison-arrow {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+  }
+
   /* ═══ Roadmap ═══ */
   .roadmap {
     max-width: 640px;
@@ -495,6 +645,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     color: var(--text-muted);
   }
 
+  /* ═══ Roadmap (subdued) ═══ */
+  .roadmap-section {
+    opacity: 0.7;
+  }
+  .roadmap-section:hover {
+    opacity: 1;
+    transition: opacity var(--duration-medium) var(--ease-out);
+  }
+  .roadmap-title {
+    font-size: 1.5rem;
+  }
+
   /* ═══ Responsive ═══ */
   @media (max-width: 768px) {
     .product-detail {
@@ -505,5 +667,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       order: unset;
     }
     .terminal { position: static; }
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+    .comparison-row {
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+    }
+    .comparison-arrow {
+      transform: rotate(90deg);
+      justify-self: center;
+    }
   }
 </style>

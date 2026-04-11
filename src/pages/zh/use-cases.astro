@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="落地场景 — AEROS" description="智能仓储、商业服务机器人、机器人 OEM——看 AEROS 怎么落地。" lang="zh">
+<BaseLayout title="落地场景 — AEROS" description="智能仓储、移动操作、商业服务机器人、机器人 OEM——看 AEROS 怎么落地。" lang="zh">
 
   <section class="section" style="padding-bottom: var(--space-2xl);">
     <div class="container">
@@ -71,13 +71,70 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Use Case 2: Service Robots ═══ -->
+  <!-- ═══ Use Case 2: Mobile Manipulation ═══ -->
   <section class="section">
     <div class="container">
       <div class="usecase usecase--reverse">
         <div class="usecase-info">
+          <div class="usecase-tag">移动操作</div>
+          <h2 class="usecase-title">导航、感知、操作<br>——一个运行时管到底</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">痛点</span>
+            <p>移动操作机器人同时跑导航、感知和操作三套子系统，传统做法各自独立，没有统一的生命周期和故障处理。一个挂了，其他的不知道。</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS 方案</span>
+            <ul>
+              <li><strong>统一运行时</strong>——导航 + 感知 + 操作共享一个生命周期管理器</li>
+              <li><strong>跨能力监控</strong>——Watcher 覆盖整个感知→决策→执行链路</li>
+              <li><strong>结构化恢复</strong>——操作失败时，导航和感知优雅降级</li>
+              <li><strong>受控进化</strong>——升级一个能力，不搞崩其他的</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">mobile-manip-fleet</span>
+              <span class="fleet-status">4 agents &middot; lab environment</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">Manipulator</span>
+                <span class="agent-count">&times;2</span>
+                <span class="agent-ecm">nav, grasp, inspect</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Scout</span>
+                <span class="agent-count">&times;1</span>
+                <span class="agent-ecm">nav, object-detect</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Supervisor</span>
+                <span class="agent-count">&times;1</span>
+                <span class="agent-ecm">monitor, coordinate</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>Governance: <strong style="color: var(--success)">strict</strong></span>
+              <span>Uptime: 3d 8h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 3: Service Robots ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="usecase">
+        <div class="usecase-info">
           <div class="usecase-tag">商业服务</div>
-          <h2 class="usecase-title">7×24 不停机，<br>远程管到底</h2>
+          <h2 class="usecase-title">7x24 不停机，<br>远程管到底</h2>
 
           <div class="pain-point">
             <span class="pain-label">痛点</span>
@@ -128,10 +185,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Use Case 3: OEM ═══ -->
-  <section class="section section-alt">
+  <!-- ═══ Use Case 4: OEM ═══ -->
+  <section class="section">
     <div class="container">
-      <div class="usecase">
+      <div class="usecase usecase--reverse">
         <div class="usecase-info">
           <div class="usecase-tag">机器人 OEM</div>
           <h2 class="usecase-title">做平台，<br>别做项目</h2>
@@ -339,18 +396,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-top: 1px solid #21262D;
     font-size: 12px;
     color: #8B949E;
-  }
-
-  /* ═══ Use Case Photos ═══ */
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    filter: brightness(0.7);
-    margin-bottom: 0;
-  }
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    border-top: none;
   }
 
   @media (max-width: 768px) {
