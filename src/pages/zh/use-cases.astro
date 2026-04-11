@@ -2,14 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="落地场景 — AEROS" description="智能仓储、移动操作、商业服务机器人、机器人 OEM——看 AEROS 怎么落地。" lang="zh">
+<BaseLayout title="落地场景｜AEROS" description="智能仓储、移动操作、商业服务机器人、机器人 OEM——看 AEROS 怎么落地。" lang="zh">
 
   <section class="section" style="padding-bottom: var(--space-2xl);">
     <div class="container">
       <div class="section-label">落地场景</div>
-      <h1 class="page-title">AEROS 跑在哪里</h1>
+      <h1 class="page-title">不是为某一种机器人而生，而是为真实部署而设计。</h1>
       <p class="page-desc">
-        凡是需要智能体长期运行、安全进化、行为可追溯的场景，都是 AEROS 的战场。
+        AEROS 面向不同机器人形态和业务场景，提供统一的运行、能力管理与治理机制。不管是仓储、酒店、移动操作还是 OEM 平台建设，核心问题都不是"能不能做一个 Demo"，而是"能不能稳定上线"。
       </p>
     </div>
   </section>
@@ -20,20 +20,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="usecase">
         <div class="usecase-info">
           <div class="usecase-tag">智能仓储</div>
-          <h2 class="usecase-title">一套运行时，<br>管一整个车队</h2>
+          <h2 class="usecase-title">多机器人协同，<br>更需要统一运行机制</h2>
 
           <div class="pain-point">
             <span class="pain-label">痛点</span>
-            <p>仓库里 20-50 台机器人，AMR、协作臂、分拣机，每台一套软件栈。能力不能跨形态复用，出了问题没有审计链路可以追。</p>
+            <p>仓储环境中常见的问题不是单机能力不足，而是系统割裂：不同机器人各跑一套逻辑，升级难、监控难、问题定位更难。</p>
           </div>
 
           <div class="aeros-value">
             <span class="value-label">AEROS 方案</span>
             <ul>
-              <li><strong>统一运行时</strong>——一个生命周期管理器搞定整个车队</li>
-              <li><strong>ECM 跨形态复用</strong>——写一次能力，到处部署</li>
-              <li><strong>全链路审计</strong>——每个决策、每次行动都可追溯</li>
-              <li><strong>安全门部署</strong>——新能力必须过安全检查才能上线</li>
+              <li><strong>统一管理异构机器人运行状态</strong></li>
+              <li><strong>统一能力装载与更新</strong></li>
+              <li><strong>统一执行链监控与审计</strong></li>
+              <li><strong>支持策略下发、灰度变更与问题回滚</strong></li>
             </ul>
           </div>
         </div>
@@ -77,20 +77,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="usecase usecase--reverse">
         <div class="usecase-info">
           <div class="usecase-tag">移动操作</div>
-          <h2 class="usecase-title">导航、感知、操作<br>——一个运行时管到底</h2>
+          <h2 class="usecase-title">把导航、感知、抓取和递送<br>纳入同一运行时</h2>
 
           <div class="pain-point">
             <span class="pain-label">痛点</span>
-            <p>移动操作机器人同时跑导航、感知和操作三套子系统，传统做法各自独立，没有统一的生命周期和故障处理。一个挂了，其他的不知道。</p>
+            <p>移动操作往往涉及多模块协同：感知、规划、导航、机械臂控制、任务切换、异常恢复。如果这些能力只是临时拼接，系统很快就会变得脆弱。</p>
           </div>
 
           <div class="aeros-value">
             <span class="value-label">AEROS 方案</span>
             <ul>
-              <li><strong>统一运行时</strong>——导航 + 感知 + 操作共享一个生命周期管理器</li>
-              <li><strong>跨能力监控</strong>——Watcher 覆盖整个感知→决策→执行链路</li>
-              <li><strong>结构化恢复</strong>——操作失败时，导航和感知优雅降级</li>
-              <li><strong>受控进化</strong>——升级一个能力，不搞崩其他的</li>
+              <li><strong>用 ECM 方式组织能力模块</strong></li>
+              <li><strong>统一任务切换和执行流管理</strong></li>
+              <li><strong>对复杂任务过程进行监控和兜底</strong></li>
+              <li><strong>支持能力升级与受控演进</strong></li>
             </ul>
           </div>
         </div>
@@ -134,20 +134,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="usecase">
         <div class="usecase-info">
           <div class="usecase-tag">商业服务</div>
-          <h2 class="usecase-title">7x24 不停机，<br>远程管到底</h2>
+          <h2 class="usecase-title">酒店、医院、零售等场景，<br>更需要可管理的智能体系统</h2>
 
           <div class="pain-point">
             <span class="pain-label">痛点</span>
-            <p>服务机器人在酒店、医院、商场全天候运行。需要组合多种能力、不停机 OTA 升级，法规一变还得远程推策略。</p>
+            <p>服务场景对稳定性、责任链和变更控制要求很高。系统一旦出问题，不只是任务失败，还会直接影响客户体验和运营秩序。</p>
           </div>
 
           <div class="aeros-value">
             <span class="value-label">AEROS 方案</span>
             <ul>
-              <li><strong>ECM 热替换</strong>——不重启 Agent 就能升级能力</li>
-              <li><strong>远程策略推送</strong>——治理规则一键下发到整个车队</li>
-              <li><strong>金丝雀部署</strong>——新能力先推 5% 的机器人试水</li>
-              <li><strong>秒级回滚</strong>——出问题一秒回退</li>
+              <li><strong>对服务流程进行统一治理</strong></li>
+              <li><strong>支持远程策略下发与变更管理</strong></li>
+              <li><strong>支持能力升级、灰度发布与快速回滚</strong></li>
+              <li><strong>提供审计记录和问题追踪能力</strong></li>
             </ul>
           </div>
         </div>
@@ -190,21 +190,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <div class="container">
       <div class="usecase usecase--reverse">
         <div class="usecase-info">
-          <div class="usecase-tag">机器人 OEM</div>
-          <h2 class="usecase-title">做平台，<br>别做项目</h2>
+          <div class="usecase-tag">Robot OEM</div>
+          <h2 class="usecase-title">做平台，而不是<br>一单一版的项目系统</h2>
 
           <div class="pain-point">
             <span class="pain-label">痛点</span>
-            <p>每个客户都从头搭运行时。项目之间能力没法复用，治理更是没有。集成成本吃掉利润，说好的平台化永远落不了地。</p>
+            <p>OEM 经常面临一个问题：不同机型、不同客户、不同场景，导致软件栈不断分叉，最终难以维护、难以复用、难以形成平台能力。</p>
           </div>
 
           <div class="aeros-value">
             <span class="value-label">AEROS 方案</span>
             <ul>
-              <li><strong>标准运行时</strong>——别再给每个客户重造轮子</li>
-              <li><strong>ECM 生态</strong>——能力写一次，跨项目、跨机型复用</li>
-              <li><strong>治理即插即用</strong>——企业客户开箱就有审计和策略</li>
-              <li><strong>交付提速</strong>——从几个月的定制集成缩短到几周</li>
+              <li><strong>建立统一运行平台</strong></li>
+              <li><strong>支持跨机型能力复用</strong></li>
+              <li><strong>降低不同项目之间的重复开发</strong></li>
+              <li><strong>让升级、审计和治理机制平台化</strong></li>
             </ul>
           </div>
         </div>

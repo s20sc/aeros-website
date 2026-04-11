@@ -2,17 +2,15 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="技术架构 — AEROS" description="AEROS 五层运行时架构：从硬件抽象到智能体治理执行，层层分明。" lang="zh">
+<BaseLayout title="技术架构｜AEROS" description="AEROS 五层运行时架构：从硬件抽象到智能体治理执行，层层分明。" lang="zh">
 
   <!-- ═══ Header ═══ -->
   <section class="section" style="padding-bottom: var(--space-2xl);">
     <div class="container">
       <div class="section-label">技术架构</div>
-      <h1 class="page-title">一台机器人，一个 Agent</h1>
+      <h1 class="page-title">为具身智能体而设计的运行时架构</h1>
       <p class="page-desc">
-        能力靠 ECM 加载，行为靠治理约束。
-        不搞多智能体集群，不搞模型直连硬件。
-        一个 Agent 管到底。
+        AEROS 不是把模型直接连到硬件上，而是在智能、能力、执行和治理之间建立清晰分层，让具身系统在复杂环境中可运行、可约束、可审计。
       </p>
     </div>
   </section>
@@ -44,9 +42,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">架构</div>
-      <h2 class="section-title">五层运行时架构</h2>
+      <h2 class="section-title">把系统边界分清楚，系统才有可能稳定</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl);">
-        点击每一层，看看它负责什么。
+        AEROS 通过这五层，把"做什么""怎么做""允许不允许做"这三件事明确拆开。
       </p>
 
       <div class="arch-interactive">
@@ -197,7 +195,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section section-alt">
     <div class="container">
       <div class="section-label">定位</div>
-      <h2 class="section-title">AEROS 与 ROS 2</h2>
+      <h2 class="section-title">ROS 2 之上，再往上一层</h2>
 
       <div class="ros-layout">
         <div class="ros-diagram">
@@ -207,8 +205,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="ros-text">
           <h3>不同层，不同问题</h3>
           <p>
-            ROS 2 是通信中间件，管节点之间怎么传消息。
-            AEROS 在 ROS 2 之上，管智能体怎么<em>跑</em>和怎么<em>治理</em>。
+            ROS 2 主要解决通信、节点协作和消息传递问题。AEROS 解决的是具身智能体的运行、能力管理和治理控制问题。两者并不冲突，但职责不同。
           </p>
           <p>
             打个比方：<strong>Linux 和 Kubernetes</strong> 的关系，就像 <strong>ROS 2 和 AEROS</strong>。

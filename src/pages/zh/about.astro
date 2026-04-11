@@ -2,19 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="关于我们 — AEROS" description="AEROS 的使命：为具身智能体打造可治理的运行时底座。" lang="zh">
+<BaseLayout title="关于我们｜AEROS" description="AEROS 的使命：为具身智能体打造可治理的运行时底座。" lang="zh">
 
   <!-- ═══ Header ═══ -->
   <section class="section" style="padding-bottom: var(--space-2xl);">
     <div class="container">
       <div class="section-label">关于我们</div>
       <h1 class="page-title">
-        给具身智能体<br>一个配得上的底座
+        AEROS 正在构建具身智能体所需要的运行与治理基础设施。
       </h1>
-      <p class="page-subtitle">开源运行时基础设施，让具身部署可治理。</p>
+      <p class="page-subtitle"></p>
       <p class="page-desc">
-        AEROS 做的是那个把具身 AI 从实验室 Demo 变成可治理生产系统的运行时层。
-        让部署变得<em>安全</em>、<em>可审计</em>、<em>能持续</em>。
+        我们关注的不是某一个单点模型能力，也不是某一个临时场景 Demo，而是具身智能真正走向部署时所需要的系统层。
       </p>
     </div>
   </section>
@@ -25,11 +24,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="mission-block">
         <div class="mission-quote">
           <p>
-            我们做的事很简单：给具身智能体一个跑得稳、管得住、能进化的运行时。
+            AEROS 聚焦于具身智能体的运行、能力管理与治理控制。
           </p>
           <p class="mission-sub">
-            不是又一个机器人 OS，也不是模型的包装层。
-            我们要填的是"Demo 很酷"到"量产能用"之间那道鸿沟——让它变得可管理、可审计、真正安全。
+            我们的目标不是再做一个机器人中间件，也不是给模型外面包一层工具，而是定义并建设一个新的系统层：让具身智能体真正具备可运行、可治理、可演进的基础能力。
           </p>
         </div>
       </div>
@@ -40,12 +38,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">我们是谁</div>
-      <h2 class="section-title">从研究到运行时</h2>
+      <h2 class="section-title">从研究走向系统，从概念走向产品</h2>
 
       <div class="who-block">
-        <p>AEROS 起步于一个系统研究计划——七篇论文，探索具身智能体真正可部署到底需要什么。不是"足够聪明"，不是"能动就行"，是真正可部署：持续运行、安全受控、有治理、在真实世界里。</p>
-        <p>我们发现，从"Demo 很酷"到"生产能用"之间的鸿沟，不是模型问题，也不是硬件问题。是运行时问题。所以我们自己造了一个。</p>
-        <p>今天，AEROS 是一个 open-core 运行时：Apache 2.0 核心开源，能力包管理系统持续完善，企业治理层逐步成型。我们在上海。</p>
+        <p>AEROS 聚焦于具身智能体的运行、能力管理与治理控制。我们的目标不是再做一个机器人中间件，也不是给模型外面包一层工具，而是定义并建设一个新的系统层：让具身智能体真正具备可运行、可治理、可演进的基础能力。</p>
       </div>
     </div>
   </section>
@@ -80,23 +76,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-label">时机</div>
-      <h2 class="section-title">为什么是现在</h2>
+      <h2 class="section-title">时机已经成熟，但系统层仍然缺位</h2>
 
       <div class="thesis-grid">
         <div class="thesis-card">
           <div class="thesis-num">01</div>
-          <h3>模型已经就位</h3>
-          <p>大模型已经能理解物理动作、物体和环境。智能层不再是瓶颈。</p>
+          <h3>模型能力正在快速提升</h3>
+          <p>具身智能的上层能力越来越强</p>
         </div>
         <div class="thesis-card">
           <div class="thesis-num">02</div>
-          <h3>硬件加速分化</h3>
-          <p>人形、四足、AMR、协作臂——机器人车队越来越杂。没有共享运行时层已经不行了。</p>
+          <h3>机器人本体形态持续丰富</h3>
+          <p>场景化需求快速扩张</p>
         </div>
         <div class="thesis-card">
           <div class="thesis-num">03</div>
-          <h3>治理正在变成硬性要求</h3>
-          <p>机器人从实验室走进仓库、医院和公共场所，策略执行、审计和问责正在从"最好有"变成"法规要求"。</p>
+          <h3>真实部署要求更高</h3>
+          <p>真实部署对稳定性、治理、审计和升级控制提出了更高要求</p>
         </div>
       </div>
     </div>
@@ -106,10 +102,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="section section-alt">
     <div class="container">
       <div class="section-label">为什么是我们</div>
-      <h2 class="section-title">研究深度 + 工程执行力</h2>
+      <h2 class="section-title">不是一个概念，而是一条清晰的系统路线</h2>
 
       <div class="why-us-block">
-        <p class="why-us-intro">大多数机器人基础设施从中间件自底向上搭建。AEROS 从治理优先的论点自顶向下设计，经过 7 篇论文验证，落地为生产级开源软件。</p>
+        <p class="why-us-intro">AEROS 建立在一套持续推进的研究与系统实践基础上</p>
       </div>
 
       <div class="thesis-grid">
@@ -194,7 +190,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <!-- ═══ Investor CTA ═══ -->
   <section class="section section-alt" style="text-align: center;">
     <div class="container">
-      <h2 class="section-title">致投资人与合作伙伴</h2>
+      <h2 class="section-title">欢迎合作</h2>
       <p class="section-desc" style="margin: 0 auto var(--space-xl);">
         AEROS 在定义一个新品类——具身 AI 的治理运行时层，一个还不存在的系统类目。
         我们在找懂基础设施、愿意押注平台层的伙伴。
