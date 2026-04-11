@@ -9,8 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="section-label">Open Source</div>
       <h1 class="page-title">Built in the open</h1>
       <p class="page-desc">
-        AEROS Runtime Core and ECM Package System are Apache 2.0.
-        Use it, fork it, contribute to it.
+        Run the core in minutes. Inspect the architecture. Contribute capabilities.
       </p>
     </div>
   </section>
@@ -21,6 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="section-label">Repositories</div>
       <h2 class="section-title">Source code</h2>
 
+      <h3 class="repo-group-label">Available Now</h3>
       <div class="repo-grid">
         <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="repo-card">
           <div class="repo-header">
@@ -46,7 +46,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <span>arXiv</span>
           </div>
         </a>
+      </div>
 
+      <h3 class="repo-group-label repo-group-coming">Coming Next</h3>
+      <div class="repo-grid repo-grid-coming">
         <div class="repo-card repo-planned">
           <div class="repo-header">
             <span class="repo-name">s20sc/aeros-contracts</span>
@@ -204,7 +207,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border-color: rgba(0, 102, 255, 0.3);
     transform: translateY(-2px);
   }
-  .repo-planned { opacity: 0.6; }
+  .repo-group-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+  }
+  .repo-group-coming {
+    margin-top: var(--space-xl);
+    color: var(--text-muted);
+  }
+  .repo-grid-coming {
+    opacity: 0.55;
+  }
+  .repo-planned { opacity: 1; }
   .repo-planned:hover { transform: none; border-color: var(--border); }
 
   .repo-header {

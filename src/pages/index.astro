@@ -2,17 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="AEROS — The Runtime for Embodied Agents">
+<BaseLayout title="AEROS — The Governed Runtime for Embodied Agents">
 
   <!-- ═══ Section 1: Hero ═══ -->
   <section class="hero grid-bg">
     <div class="container hero-content">
-      <h1 class="hero-h1">
-        The Runtime for<br><em>Embodied Agents</em>
-      </h1>
+      <h1 class="hero-h1">AEROS</h1>
+      <p class="hero-tagline">The runtime that makes embodied agents deployable.</p>
       <p class="hero-sub">
-        One robot. One agent. One runtime.<br>
-        Build governed, evolvable infrastructure for embodied intelligence.
+        One robot. One persistent agent. One governed runtime.<br>
+        AEROS provides the missing runtime layer for embodied intelligence: execution control, policy enforcement, recovery, and auditability.
       </p>
       <div class="hero-ctas">
         <a href="/contact" class="btn btn-primary">Book a Demo</a>
@@ -20,148 +19,235 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           View on GitHub <span class="arrow">&rarr;</span>
         </a>
       </div>
-      <p class="hero-badge">Open Source Runtime Core &middot; Apache 2.0</p>
+      <p class="hero-badge">Open Source Runtime Core &middot; Apache 2.0 &middot; Research-backed Architecture</p>
     </div>
   </section>
 
-  <!-- ═══ Section 2: Problem Statement ═══ -->
+  <!-- ═══ Section 2: Transition Line ═══ -->
+  <section class="transition-line">
+    <div class="container">
+      <p class="transition-text">Beyond demos. Toward governed deployment.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 3: The Gap ═══ -->
   <section class="section">
     <div class="container">
       <div class="section-label">The Gap</div>
-      <h2 class="section-title">Models can think. Robots can move.<br>But agents still can't truly run.</h2>
+      <h2 class="section-title">Models can plan. Robots can act.<br>But embodied agents still break at runtime.</h2>
       <p class="section-desc" style="margin-bottom: var(--space-2xl)">
-        What's missing is the runtime layer: the infrastructure that lets embodied agents
-        operate reliably, safely, and continuously in the real world.
+        Today's embodied AI stack is powerful but incomplete. Foundation models can reason. Robot systems can move. What is still missing is the runtime layer that allows agents to run continuously, safely, and under control in the real world.
       </p>
 
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">&#x1D6CC;</div>
-          <h3>Models are ready for the physical world</h3>
-          <p>Foundation models can now reason about actions, objects, and environments — but reasoning alone does not make agents runnable.</p>
+      <div class="cards-grid-3">
+        <div class="info-card">
+          <h3>Reasoning is not execution</h3>
+          <p>A plan is not a runtime. Real agents need lifecycle control, state continuity, task supervision, retries, and structured recovery when the world changes.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#x25C7;</div>
-          <h3>Robotic hardware is becoming heterogeneous</h3>
-          <p>Humanoids, quadrupeds, AMRs, and robotic arms are all scaling — creating a growing need for a shared runtime layer.</p>
+        <div class="info-card">
+          <h3>Hardware diversity breaks portability</h3>
+          <p>Humanoids, mobile manipulators, robotic arms, and service robots should not each require a completely different agent stack. Embodied systems need a common runtime abstraction above hardware-specific execution.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">&#x25B3;</div>
-          <h3>Real-world deployment changes the requirements</h3>
-          <p>Once agents leave the demo stage, reliability, recovery, safety, and governance become system-level requirements.</p>
+        <div class="info-card">
+          <h3>Deployment demands governance</h3>
+          <p>In production environments, capability calls cannot run without checks. They need contracts, policy enforcement, monitoring, rollback paths, and full audit trails.</p>
         </div>
-      </div>
-
-      <div class="problem-conclusion">
-        <p>What's truly missing is the <strong>runtime</strong> that makes agents runnable, governable, and scalable.</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Section 3: Three Core Capabilities ═══ -->
+  <!-- ═══ Section 4: What AEROS Is ═══ -->
   <section class="section section-alt">
     <div class="container">
-      <div class="section-label">Core Capabilities</div>
-      <h2 class="section-title">Three layers of runtime infrastructure</h2>
-      <p class="section-desc" style="margin-bottom: var(--space-2xl)">
-        AEROS is not a tool — it's a runtime platform that governs the full lifecycle of embodied agents.
+      <div class="section-label">What Is AEROS</div>
+      <h2 class="section-title">AEROS is the governed runtime layer for embodied agents.</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-xl)">
+        AEROS sits between embodied intelligence and real-world execution. It does not replace models, robot middleware, or hardware control systems. It governs how persistent embodied agents are admitted, executed, supervised, evolved, and audited.
       </p>
+      <p class="highlight-line">AEROS does not decide what the agent wants. It governs how the agent is allowed to run.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 5: How AEROS Works ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">How AEROS works</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl)">
+        AEROS turns embodied AI from one-off task execution into a governed runtime process.
+      </p>
+
+      <div class="flow-layout">
+        <div class="flow-steps">
+          <div class="flow-step flow-step-external">
+            <span class="flow-step-num">1</span>
+            <span class="flow-step-name">User goal</span>
+          </div>
+          <div class="flow-step flow-step-external">
+            <span class="flow-step-num">2</span>
+            <span class="flow-step-name">Agent planning</span>
+          </div>
+          <div class="flow-divider">
+            <span class="flow-divider-label">AEROS takes over</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">3</span>
+            <span class="flow-step-name">Capability admission</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">4</span>
+            <span class="flow-step-name">Contract validation</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">5</span>
+            <span class="flow-step-name">Policy check</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">6</span>
+            <span class="flow-step-name">Execution</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">7</span>
+            <span class="flow-step-name">Watcher monitoring</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">8</span>
+            <span class="flow-step-name">Recovery / rollback</span>
+          </div>
+          <div class="flow-step flow-step-governed">
+            <span class="flow-step-num">9</span>
+            <span class="flow-step-name">Audit log</span>
+          </div>
+        </div>
+
+        <div class="flow-explain">
+          <h3>Every call is a governed event</h3>
+          <p>
+            Instead of blindly forwarding plans into robot action, AEROS validates what can run, under what conditions, with what monitoring, and with what fallback behavior if execution fails.
+          </p>
+          <p>
+            Steps 1&ndash;2 happen outside AEROS &mdash; any agent or planner can propose actions. From step 3 onward, AEROS takes control: checking admission, validating contracts, enforcing policies, supervising execution, and recording everything.
+          </p>
+          <p class="flow-highlight">
+            Nothing reaches hardware without passing through the governed runtime.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 6: Three Core Layers ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Core Layers</div>
+      <h2 class="section-title">Three core layers for embodied runtime</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl)"></p>
 
       <div class="capability-grid">
         <a href="/product" class="capability-card">
           <div class="capability-tag">Apache 2.0</div>
-          <h3>Agent Runtime</h3>
-          <ul>
-            <li>Lifecycle management</li>
-            <li>State persistence</li>
-            <li>Task scheduling</li>
-            <li>Execution loops</li>
-            <li>Fault recovery</li>
-            <li>Distributed tracing</li>
-          </ul>
+          <h3>Runtime Core</h3>
+          <p class="capability-desc">The execution substrate for persistent embodied agents. Manages lifecycle, scheduling, state continuity, execution flow, and runtime supervision.</p>
           <span class="capability-link">Learn more &rarr;</span>
         </a>
 
         <a href="/product#ecm" class="capability-card">
           <div class="capability-tag">Apache 2.0</div>
-          <h3>ECM Package System</h3>
-          <ul>
-            <li>Standard ECM format</li>
-            <li>Install / upgrade / rollback</li>
-            <li>Semantic versioning</li>
-            <li>Six-dimensional contracts</li>
-            <li>Compatibility checking</li>
-            <li>Shadow mode deployment</li>
-          </ul>
+          <h3>ECM / Capability Packaging</h3>
+          <p class="capability-desc">Encapsulates embodied capabilities as modular, installable, evolvable runtime units. Supports controlled composition, reuse, and capability evolution across tasks and robot embodiments.</p>
           <span class="capability-link">Learn more &rarr;</span>
         </a>
 
         <a href="/product#governance" class="capability-card capability-card--commercial">
           <div class="capability-tag tag-commercial">Enterprise</div>
-          <h3>Governance Console</h3>
-          <ul>
-            <li>Policy DSL</li>
-            <li>Watcher engine</li>
-            <li>Structured recovery</li>
-            <li>Full audit trail</li>
-            <li>Conflict detection</li>
-            <li>Version rollback</li>
-          </ul>
+          <h3>Governance Layer</h3>
+          <p class="capability-desc">Makes runtime control a first-class system property. Applies contracts, permissions, policies, monitoring, rollback, and auditability across the full execution chain.</p>
           <span class="capability-link">Learn more &rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Section 4: Differentiation ═══ -->
+  <!-- ═══ Section 7: Not Another Robot OS ═══ -->
   <section class="section">
     <div class="container">
       <div class="section-label">Positioning</div>
       <h2 class="section-title">Not another Robot OS</h2>
-      <p class="section-desc" style="margin-bottom: var(--space-2xl)">
-        ROS 2 manages communication. AEROS manages how agents run and are governed.<br>
-        Like Kubernetes is to Linux — a different layer, a different concern.
-      </p>
+      <p class="section-desc" style="margin-bottom: var(--space-2xl)"></p>
 
-      <div class="comparison-table">
-        <div class="comparison-header">
-          <span>Traditional Robot OS</span>
-          <span>AEROS</span>
+      <div class="comparison-rows">
+        <div class="comparison-row-item">
+          <div class="comparison-them">
+            <span class="comparison-label-tag">ROS 2</span> focuses on <strong>communication</strong>
+          </div>
+          <div class="comparison-arrow-divider">&rarr;</div>
+          <div class="comparison-us">
+            <span class="comparison-label-tag comparison-label-aeros">AEROS</span> focuses on <strong>governed agent runtime</strong>
+          </div>
         </div>
-        <div class="comparison-row">
-          <span>Manages device communication</span>
-          <span>Manages agent execution</span>
+        <div class="comparison-row-item">
+          <div class="comparison-them">
+            <span class="comparison-label-tag">Workflow tools</span> focus on <strong>orchestration</strong>
+          </div>
+          <div class="comparison-arrow-divider">&rarr;</div>
+          <div class="comparison-us">
+            <span class="comparison-label-tag comparison-label-aeros">AEROS</span> focuses on <strong>persistent execution under runtime constraints</strong>
+          </div>
         </div>
-        <div class="comparison-row">
-          <span>Nodes + Messages</span>
-          <span>Agent + ECM + Policy</span>
-        </div>
-        <div class="comparison-row">
-          <span>Deploy once</span>
-          <span>Continuous operation + evolution</span>
-        </div>
-        <div class="comparison-row">
-          <span>No audit trail</span>
-          <span>Full-chain traceability</span>
-        </div>
-        <div class="comparison-row">
-          <span>Static capabilities</span>
-          <span>Governed capability evolution</span>
+        <div class="comparison-row-item">
+          <div class="comparison-them">
+            <span class="comparison-label-tag">Model stacks</span> focus on <strong>reasoning</strong>
+          </div>
+          <div class="comparison-arrow-divider">&rarr;</div>
+          <div class="comparison-us">
+            <span class="comparison-label-tag comparison-label-aeros">AEROS</span> focuses on <strong>admission, supervision, recovery, and policy control</strong>
+          </div>
         </div>
       </div>
 
-      <p class="comparison-footnote">
-        ROS 2 handles communication. AEROS handles how agents are <em>run</em> and <em>governed</em>.<br>
-        Kubernetes isn't a Linux plugin. AEROS isn't a ROS 2 plugin.
-      </p>
+      <div class="analogy-block">
+        <p>Linux gave machines a system layer.</p>
+        <p>Kubernetes gave distributed applications a control layer.</p>
+        <p class="analogy-highlight">AEROS brings governed runtime control to embodied agents.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ═══ Section 5: Architecture ═══ -->
+  <!-- ═══ Section 8: What AEROS Is / Is Not ═══ -->
   <section class="section section-alt">
     <div class="container">
+      <div class="section-label">Clarity</div>
+      <h2 class="section-title">What AEROS is — and is not</h2>
+
+      <div class="is-isnot-grid">
+        <div class="is-column">
+          <h3 class="is-isnot-heading is-heading">AEROS is</h3>
+          <ul class="is-list">
+            <li><span class="check-icon">&#x2713;</span> A governed runtime for persistent embodied agents</li>
+            <li><span class="check-icon">&#x2713;</span> A capability execution and evolution layer</li>
+            <li><span class="check-icon">&#x2713;</span> A supervision, recovery, and policy enforcement system</li>
+            <li><span class="check-icon">&#x2713;</span> An audit and control plane for embodied AI deployment</li>
+          </ul>
+        </div>
+        <div class="isnot-column">
+          <h3 class="is-isnot-heading isnot-heading">AEROS is not</h3>
+          <ul class="isnot-list">
+            <li><span class="x-icon">&#x2717;</span> Not another robot middleware</li>
+            <li><span class="x-icon">&#x2717;</span> Not a hardware driver framework</li>
+            <li><span class="x-icon">&#x2717;</span> Not just a model-serving stack</li>
+            <li><span class="x-icon">&#x2717;</span> Not a demo orchestration toy</li>
+            <li><span class="x-icon">&#x2717;</span> Not a ROS plugin</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 9: Five-Layer Architecture ═══ -->
+  <section class="section">
+    <div class="container">
       <div class="section-label">Architecture</div>
-      <h2 class="section-title">Five-layer runtime architecture</h2>
+      <h2 class="section-title">A five-layer architecture for embodied runtime</h2>
 
       <div class="arch-layout">
         <div class="arch-stack">
@@ -207,53 +293,114 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </a>
         </div>
       </div>
+
+      <p class="arch-summary">Together, these layers separate intelligence from execution discipline, and execution discipline from hardware dependence.</p>
     </div>
   </section>
 
-  <!-- ═══ Section 6: Trust Signals ═══ -->
+  <!-- ═══ Section 10: Use Cases ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Use Cases</div>
+      <h2 class="section-title">Built for real embodied deployment scenarios</h2>
+
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <div class="usecase-icon">&#x1F916;</div>
+          <h3>Humanoids</h3>
+          <p>Run persistent embodied agents with governed skill execution, lifecycle control, and safe capability evolution.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">&#x1F9BE;</div>
+          <h3>Mobile Manipulation</h3>
+          <p>Coordinate navigation, perception, and manipulation under a unified runtime with monitoring and recovery.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">&#x1F3ED;</div>
+          <h3>Industrial &amp; Enterprise</h3>
+          <p>Add policy enforcement, rollout control, and auditability to production robot-agent workflows.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="usecase-icon">&#x1F504;</div>
+          <h3>Cross-Embodiment</h3>
+          <p>Reuse runtime logic across robot forms without rebuilding the full agent stack for every embodiment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 11: What Exists Today ═══ -->
   <section class="section">
     <div class="container">
-      <div class="section-label">Built on Research</div>
-      <h2 class="section-title">Systematic academic foundation</h2>
+      <div class="section-label">Proof</div>
+      <h2 class="section-title">What exists today</h2>
 
-      <div class="trust-grid">
-        <div class="trust-card">
-          <div class="trust-number">7</div>
-          <div class="trust-label">Papers</div>
-          <div class="trust-desc">Systematic research program covering runtime, governance, evolution, contracts, federation, and benchmarking</div>
-        </div>
-        <div class="trust-card">
-          <div class="trust-number">4</div>
-          <div class="trust-label">arXiv Preprints</div>
-          <div class="trust-desc">Publicly available for peer review and academic scrutiny</div>
-        </div>
-        <div class="trust-card">
-          <div class="trust-number">1</div>
-          <div class="trust-label">Open Source MVP</div>
-          <div class="trust-desc">Runtime Core available under Apache 2.0 license</div>
-        </div>
-      </div>
+      <ul class="proof-list">
+        <li><span class="proof-check">&#x2713;</span> Open-source runtime core — available now</li>
+        <li><span class="proof-check">&#x2713;</span> ECM packaging workflow — defined and documented</li>
+        <li><span class="proof-check">&#x2713;</span> Governance pipeline with watcher-based supervision — implemented in MVP</li>
+        <li><span class="proof-check">&#x2713;</span> Architecture and evaluation protocol — publicly documented across 7 papers</li>
+        <li><span class="proof-check">&#x2713;</span> Early demos — governed execution across representative embodied tasks</li>
+      </ul>
 
-      <div style="text-align: center; margin-top: var(--space-xl)">
-        <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-secondary">
-          View Research Program <span class="arrow">&rarr;</span>
+      <p class="proof-closing">AEROS is not just a concept for embodied AI. It is being built as a deployable runtime foundation.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Section 12: Research ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">Research</div>
+      <h2 class="section-title">Research-backed, system-driven</h2>
+      <p class="section-desc" style="margin-bottom: var(--space-xl)">
+        AEROS is grounded in a broader research program around embodied runtime systems, governance, capability contracts, and deployment benchmarks. The goal is not to publish ideas in isolation, but to define a new systems layer for embodied intelligence.
+      </p>
+      <div class="research-ctas">
+        <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-primary">View Research Program</a>
+        <a href="/technology" class="btn btn-secondary">
+          Read the Architecture <span class="arrow">&rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ Section 7: CTA ═══ -->
-  <section class="cta-section grid-bg">
-    <div class="container" style="text-align: center">
-      <h2 class="cta-title">Ready to make your<br>robot systems <em>governed</em>?</h2>
-      <p class="cta-desc">See how AEROS can bring governance, evolution, and safety to your embodied agents.</p>
-      <div class="cta-buttons">
-        <a href="/contact" class="btn btn-primary">Book a Demo</a>
-        <a href="/open-source" class="btn btn-secondary">Read the Docs</a>
-        <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-ghost">
-          Join the Community <span class="arrow">&rarr;</span>
-        </a>
+  <!-- ═══ Section 13: CTA by Audience ═══ -->
+  <section class="section grid-bg">
+    <div class="container">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Explore AEROS</h2>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>For developers</h3>
+          <p>Read the docs, inspect the runtime core, and explore the architecture.</p>
+          <div class="audience-ctas">
+            <a href="/open-source" class="btn btn-secondary btn-sm">Read the Docs</a>
+            <a href="https://github.com/s20sc/aeros-runtime" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View GitHub &rarr;</a>
+          </div>
+        </div>
+        <div class="audience-card audience-card--highlight">
+          <h3>For partners</h3>
+          <p>See how AEROS enables governed deployment for embodied agents in real-world systems.</p>
+          <div class="audience-ctas">
+            <a href="/contact" class="btn btn-primary btn-sm">Book a Demo</a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <h3>For researchers</h3>
+          <p>Follow the research roadmap for runtime, governance, and embodied systems infrastructure.</p>
+          <div class="audience-ctas">
+            <a href="https://s20sc.github.io/aeros-project" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">View Research</a>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ Section 14: Brand Line ═══ -->
+  <section class="brand-line">
+    <div class="container">
+      <p class="brand-text">The governed runtime for embodied agents.</p>
     </div>
   </section>
 
@@ -273,12 +420,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,102,255,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 30% at 20% 80%, rgba(0,194,168,0.06) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 30% at 80% 60%, rgba(0,102,255,0.06) 0%, transparent 50%);
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,102,255,0.10) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 30% at 20% 80%, rgba(0,194,168,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 30% at 80% 60%, rgba(0,102,255,0.04) 0%, transparent 50%);
     pointer-events: none;
   }
-  /* Animated floating orbs */
   .hero::after {
     content: '';
     position: absolute;
@@ -287,36 +433,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(0,102,255,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0,102,255,0.08) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(60px);
-    animation: hero-pulse 8s ease-in-out infinite alternate;
+    animation: hero-pulse 10s ease-in-out infinite alternate;
     pointer-events: none;
   }
   @keyframes hero-pulse {
-    0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
-    100% { opacity: 1; transform: translateX(-50%) scale(1.2); }
+    0% { opacity: 0.4; transform: translateX(-50%) scale(1); }
+    100% { opacity: 0.8; transform: translateX(-50%) scale(1.15); }
   }
   .hero-content { position: relative; z-index: 2; }
 
   .hero-h1 {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(3.5rem, 8vw, 6rem);
     font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    line-height: 1;
+    letter-spacing: -0.03em;
     color: var(--text-primary);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
-  .hero-h1 em {
-    font-style: normal;
+
+  .hero-tagline {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
     color: var(--primary);
+    margin-bottom: var(--space-lg);
+    font-weight: 400;
   }
 
   .hero-sub {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--text-secondary);
-    max-width: 520px;
+    max-width: 580px;
     margin: 0 auto var(--space-2xl);
     line-height: 1.7;
   }
@@ -338,59 +488,175 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .arrow { margin-left: 4px; }
 
-  /* ═══ Problem Statement ═══ */
-  .problem-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-  }
-
-  .problem-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-  }
-
-  .problem-icon {
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin-bottom: var(--space-md);
-  }
-
-  .problem-card h3 {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    margin-bottom: var(--space-sm);
-    color: var(--text-primary);
-  }
-
-  .problem-card p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-
-  .problem-conclusion {
+  /* ═══ Transition Line ═══ */
+  .transition-line {
+    padding: var(--space-3xl) 0;
     text-align: center;
-    padding: var(--space-xl);
-    background: var(--bg-surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
   }
-
-  .problem-conclusion p {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
+  .transition-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    color: var(--text-muted);
+    letter-spacing: -0.01em;
   }
-  .problem-conclusion strong { color: var(--text-primary); }
 
   /* ═══ Section Alt Background ═══ */
   .section-alt {
     background: var(--bg-surface);
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* ═══ 3-Column Card Grid ═══ */
+  .cards-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .info-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .info-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+
+  .info-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ═══ Highlight Line ═══ */
+  .highlight-line {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    padding: var(--space-lg);
+    border-left: 3px solid var(--primary);
+    background: rgba(0, 102, 255, 0.04);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    max-width: 720px;
+  }
+
+  /* ═══ Request Flow (Section 5) ═══ */
+  .flow-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  /* Vertical line connecting steps */
+  .flow-steps::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    bottom: 18px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+    position: relative;
+  }
+
+  .flow-step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .flow-step-external .flow-step-num {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+  .flow-step-external .flow-step-name {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .flow-step-governed .flow-step-num {
+    background: rgba(0, 102, 255, 0.15);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    color: var(--primary);
+  }
+  .flow-step-governed .flow-step-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .flow-divider {
+    padding: var(--space-sm) 0 var(--space-sm) 44px;
+    position: relative;
+  }
+  .flow-divider-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .flow-explain {
+    padding-top: var(--space-sm);
+  }
+  .flow-explain h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+  }
+  .flow-explain p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+  .flow-highlight {
+    font-weight: 600;
+    color: var(--primary) !important;
+    font-size: 14px !important;
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 768px) {
+    .flow-layout { grid-template-columns: 1fr; }
   }
 
   /* ═══ Capabilities ═══ */
@@ -442,25 +708,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--text-primary);
   }
 
-  .capability-card ul {
+  .capability-desc {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-lg);
-  }
-
-  .capability-card li {
     font-size: 14px;
     color: var(--text-secondary);
-    padding-left: var(--space-md);
-    position: relative;
-  }
-  .capability-card li::before {
-    content: '·';
-    position: absolute;
-    left: 0;
-    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
   }
 
   .capability-link {
@@ -469,67 +722,135 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--primary);
   }
 
-  /* ═══ Comparison Table ═══ */
-  .comparison-table {
-    max-width: 800px;
-    margin: 0 auto var(--space-xl);
+  /* ═══ Comparison Rows (Section 7) ═══ */
+  .comparison-rows {
+    max-width: 900px;
+    margin: 0 auto var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .comparison-row-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    overflow: hidden;
-  }
-
-  .comparison-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     background: var(--bg-surface);
-    border-bottom: 1px solid var(--border);
   }
 
-  .comparison-header span {
-    padding: var(--space-md) var(--space-lg);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+  .comparison-them {
+    flex: 1;
+    font-size: 14px;
     color: var(--text-muted);
   }
-  .comparison-header span:last-child {
+  .comparison-them strong { color: var(--text-secondary); }
+
+  .comparison-arrow-divider {
+    flex-shrink: 0;
+    font-family: var(--font-mono);
     color: var(--primary);
-    border-left: 1px solid var(--border);
+    font-size: 16px;
   }
 
-  .comparison-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-  .comparison-row:last-child { border-bottom: none; }
-
-  .comparison-row span {
-    padding: var(--space-md) var(--space-lg);
+  .comparison-us {
+    flex: 1;
     font-size: 14px;
     color: var(--text-secondary);
   }
-  .comparison-row span:last-child {
-    color: var(--text-primary);
-    font-weight: 500;
-    border-left: 1px solid var(--border-subtle);
-    background: rgba(0, 102, 255, 0.02);
+  .comparison-us strong { color: var(--text-primary); }
+
+  .comparison-label-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+    margin-right: var(--space-xs);
+  }
+  .comparison-label-aeros {
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--primary);
   }
 
-  .comparison-footnote {
+  .analogy-block {
     text-align: center;
-    font-size: 14px;
-    color: var(--text-muted);
     max-width: 640px;
     margin: 0 auto;
-    line-height: 1.6;
   }
-  .comparison-footnote em {
+  .analogy-block p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .analogy-highlight {
     font-family: var(--font-display);
-    font-style: italic;
+    font-size: 1.125rem !important;
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    margin-top: var(--space-sm);
+  }
+
+  /* ═══ Is / Is Not (Section 8) ═══ */
+  .is-isnot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .is-column,
+  .isnot-column {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .is-isnot-heading {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .is-heading { color: var(--secondary); }
+  .isnot-heading { color: var(--text-muted); }
+
+  .is-list,
+  .isnot-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .is-list li,
+  .isnot-list li {
+    font-size: 14px;
     color: var(--text-secondary);
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .check-icon {
+    color: var(--secondary);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .x-icon {
+    color: var(--text-muted);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1.4;
   }
 
   /* ═══ Architecture ═══ */
@@ -541,7 +862,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .arch-stack {
-    background: var(--bg-base);
+    background: var(--bg-surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
@@ -601,93 +922,175 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 15px;
   }
 
-  /* ═══ Trust Signals ═══ */
-  .trust-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+  .arch-summary {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: var(--space-2xl);
+    font-style: italic;
+    font-family: var(--font-display);
   }
 
-  .trust-card {
-    background: var(--bg-surface);
+  /* ═══ Use Cases (Section 10) ═══ */
+  .usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+
+  .usecase-card {
+    background: var(--bg-base);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
-    text-align: center;
+    transition: border-color var(--duration-short), transform var(--duration-short);
+  }
+  .usecase-card:hover {
+    border-color: rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
   }
 
-  .trust-number {
-    font-family: var(--font-mono);
-    font-size: 3.5rem;
-    font-weight: 600;
-    color: var(--primary);
-    line-height: 1;
-    margin-bottom: var(--space-xs);
+  .usecase-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
   }
 
-  .trust-label {
+  .usecase-card h3 {
     font-family: var(--font-display);
     font-size: 1.25rem;
     color: var(--text-primary);
     margin-bottom: var(--space-sm);
   }
 
-  .trust-desc {
+  .usecase-card p {
     font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.5;
-  }
-
-  /* ═══ CTA Section ═══ */
-  .cta-section {
-    padding: var(--space-4xl) 0;
-    overflow: hidden;
-    position: relative;
-  }
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,102,255,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .cta-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: var(--text-primary);
-    margin-bottom: var(--space-md);
-    line-height: 1.15;
-    position: relative;
-  }
-  .cta-title em {
-    font-style: normal;
-    color: var(--primary);
-  }
-
-  .cta-desc {
     color: var(--text-secondary);
-    font-size: 1.125rem;
-    margin-bottom: var(--space-xl);
-    position: relative;
+    line-height: 1.6;
   }
 
-  .cta-buttons {
+  /* ═══ Proof / What Exists (Section 11) ═══ */
+  .proof-list {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .proof-list li {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    line-height: 1.6;
+  }
+
+  .proof-check {
+    color: var(--secondary);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .proof-closing {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    max-width: 640px;
+  }
+
+  /* ═══ Research CTAs ═══ */
+  .research-ctas {
     display: flex;
     gap: var(--space-md);
-    justify-content: center;
     flex-wrap: wrap;
-    position: relative;
+  }
+
+  /* ═══ Audience Grid (Section 13) ═══ */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+
+  .audience-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+  }
+  .audience-card--highlight {
+    border-color: rgba(0, 102, 255, 0.3);
+    background: rgba(0, 102, 255, 0.03);
+  }
+
+  .audience-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .audience-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: var(--space-lg);
+  }
+
+  .audience-ctas {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  /* ═══ Brand Line (Section 14) ═══ */
+  .brand-line {
+    padding: var(--space-3xl) 0;
+    text-align: center;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .brand-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    color: var(--text-secondary);
+    letter-spacing: -0.01em;
   }
 
   /* ═══ Responsive ═══ */
   @media (max-width: 768px) {
     .hero { padding: 100px 0 80px; }
-    .problem-grid,
+    .cards-grid-3,
     .capability-grid,
-    .trust-grid { grid-template-columns: 1fr; }
+    .audience-grid { grid-template-columns: 1fr; }
     .arch-layout { grid-template-columns: 1fr; }
-    .comparison-header span,
-    .comparison-row span { padding: var(--space-sm) var(--space-md); font-size: 13px; }
+    .is-isnot-grid { grid-template-columns: 1fr; }
+    .usecase-grid { grid-template-columns: 1fr; }
+    .comparison-row-item {
+      flex-direction: column;
+      text-align: center;
+    }
+    .comparison-arrow-divider {
+      transform: rotate(90deg);
+    }
+    .flow-governed-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-xs);
+    }
+    .flow-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-xs);
+    }
   }
 </style>

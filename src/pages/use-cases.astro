@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Use Cases — AEROS" description="AEROS runtime for smart warehousing, commercial service robots, and robot OEMs.">
+<BaseLayout title="Use Cases — AEROS" description="AEROS runtime for smart warehousing, mobile manipulation, commercial service robots, and robot OEMs.">
 
   <section class="section" style="padding-bottom: var(--space-2xl);">
     <div class="container">
@@ -72,10 +72,67 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Use Case 2: Service Robots ═══ -->
+  <!-- ═══ Use Case 2: Mobile Manipulation ═══ -->
   <section class="section">
     <div class="container">
       <div class="usecase usecase--reverse">
+        <div class="usecase-info">
+          <div class="usecase-tag">Mobile Manipulation</div>
+          <h2 class="usecase-title">Navigate, perceive, manipulate<br>— under one runtime</h2>
+
+          <div class="pain-point">
+            <span class="pain-label">The pain</span>
+            <p>Mobile manipulators combine navigation, perception, and manipulation — three subsystems that traditionally run on separate stacks with no unified lifecycle or failure handling. When one breaks, the others don't know.</p>
+          </div>
+
+          <div class="aeros-value">
+            <span class="value-label">AEROS delivers</span>
+            <ul>
+              <li><strong>Unified runtime</strong> — one lifecycle manager for nav + perception + manipulation</li>
+              <li><strong>Cross-capability monitoring</strong> — watchers span the full sense-decide-act loop</li>
+              <li><strong>Structured recovery</strong> — if manipulation fails, navigation and perception degrade gracefully</li>
+              <li><strong>Governed evolution</strong> — upgrade one capability without destabilizing the others</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="usecase-visual">
+          <div class="fleet-diagram">
+            <div class="fleet-header">
+              <span class="fleet-name">mobile-manip-fleet</span>
+              <span class="fleet-status">4 agents &middot; lab environment</span>
+            </div>
+            <div class="fleet-agents">
+              <div class="fleet-agent">
+                <span class="agent-type">Manipulator</span>
+                <span class="agent-count">&times;2</span>
+                <span class="agent-ecm">nav, grasp, inspect</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Scout</span>
+                <span class="agent-count">&times;1</span>
+                <span class="agent-ecm">nav, object-detect</span>
+              </div>
+              <div class="fleet-agent">
+                <span class="agent-type">Supervisor</span>
+                <span class="agent-count">&times;1</span>
+                <span class="agent-ecm">monitor, coordinate</span>
+              </div>
+            </div>
+            <div class="fleet-footer">
+              <span>Governance: <strong style="color: var(--success)">strict</strong></span>
+              <span>Uptime: 3d 8h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Use Case 3: Service Robots ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="usecase">
         <div class="usecase-info">
           <div class="usecase-tag">Commercial Service</div>
           <h2 class="usecase-title">Long-running agents,<br>remote governance</h2>
@@ -129,10 +186,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ═══ Use Case 3: OEM ═══ -->
-  <section class="section section-alt">
+  <!-- ═══ Use Case 4: OEM ═══ -->
+  <section class="section">
     <div class="container">
-      <div class="usecase">
+      <div class="usecase usecase--reverse">
         <div class="usecase-info">
           <div class="usecase-tag">Robot OEM</div>
           <h2 class="usecase-title">Platform, not project</h2>
@@ -340,18 +397,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border-top: 1px solid #21262D;
     font-size: 12px;
     color: #8B949E;
-  }
-
-  /* ═══ Use Case Photos ═══ */
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    filter: brightness(0.7);
-    margin-bottom: 0;
-  }
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    border-top: none;
   }
 
   @media (max-width: 768px) {
