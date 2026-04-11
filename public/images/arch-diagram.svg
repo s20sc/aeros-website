@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8B949E"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" rx="12" fill="#0D1117"/>
+
+  <!-- Layer 5: Agent -->
+  <rect x="40" y="24" width="520" height="52" rx="8" fill="rgba(0,102,255,0.06)" stroke="#0066FF" stroke-width="1.5"/>
+  <text x="60" y="55" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="600">Layer 5: Agent</text>
+  <text x="520" y="55" fill="#8B949E" font-family="sans-serif" font-size="12" text-anchor="end">Application logic &amp; decision-making</text>
+
+  <!-- Arrow 5->4 -->
+  <line x1="300" y1="76" x2="300" y2="92" stroke="#8B949E" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Layer 4: Governance -->
+  <rect x="40" y="96" width="520" height="52" rx="8" fill="rgba(0,194,168,0.06)" stroke="#00C2A8" stroke-width="1.5"/>
+  <text x="60" y="127" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="600">Layer 4: Governance</text>
+  <text x="520" y="127" fill="#8B949E" font-family="sans-serif" font-size="12" text-anchor="end">Policy enforcement &amp; audit</text>
+
+  <!-- Arrow 4->3 -->
+  <line x1="300" y1="148" x2="300" y2="164" stroke="#8B949E" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Layer 3: ECM Package -->
+  <rect x="40" y="168" width="520" height="52" rx="8" fill="rgba(0,102,255,0.06)" stroke="#0066FF" stroke-width="1.5"/>
+  <text x="60" y="199" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="600">Layer 3: ECM Package</text>
+  <text x="520" y="199" fill="#8B949E" font-family="sans-serif" font-size="12" text-anchor="end">Capability modules &amp; contracts</text>
+
+  <!-- Arrow 3->2 -->
+  <line x1="300" y1="220" x2="300" y2="236" stroke="#8B949E" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Layer 2: Runtime -->
+  <rect x="40" y="240" width="520" height="52" rx="8" fill="rgba(0,102,255,0.06)" stroke="#0066FF" stroke-width="1.5"/>
+  <text x="60" y="271" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="600">Layer 2: Runtime</text>
+  <text x="520" y="271" fill="#8B949E" font-family="sans-serif" font-size="12" text-anchor="end">Lifecycle, scheduling, execution</text>
+
+  <!-- Arrow 2->1 -->
+  <line x1="300" y1="292" x2="300" y2="308" stroke="#8B949E" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Layer 1: Embodiment -->
+  <rect x="40" y="312" width="520" height="52" rx="8" fill="rgba(0,102,255,0.06)" stroke="#0066FF" stroke-width="1.5"/>
+  <text x="60" y="343" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="600">Layer 1: Embodiment</text>
+  <text x="520" y="343" fill="#8B949E" font-family="sans-serif" font-size="12" text-anchor="end">Hardware abstraction &amp; sensors</text>
+
+  <!-- Title -->
+  <text x="300" y="390" fill="#64748B" font-family="sans-serif" font-size="11" text-anchor="middle">AEROS Five-Layer Runtime Architecture</text>
+</svg>
