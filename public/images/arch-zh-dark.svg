@@ -25,16 +25,16 @@
   <line x1="360" y1="108" x2="360" y2="134" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <!-- LAYER 2: Upper Cognition -->
-  <rect x="60" y="138" width="600" height="86" rx="12" fill="rgba(245,158,11,0.06)" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.4"/>
-  <text x="360" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#F59E0B" letter-spacing="0.5">
+  <rect x="60" y="138" width="600" height="86" rx="12" fill="rgba(148,163,184,0.06)" stroke="#94A3B8" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="360" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#94A3B8" letter-spacing="0.5">
     上层认知 &#x2014; Agent / 规划器 / 模型
   </text>
 
-  <rect x="80" y="170" width="260" height="40" rx="8" fill="#1A2332" stroke="#D97706" stroke-width="1" stroke-opacity="0.3"/>
-  <text x="210" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#FCD34D">OpenClaw 智能体</text>
+  <rect x="80" y="170" width="260" height="40" rx="8" fill="#1A2332" stroke="#64748B" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="210" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD5E1">OpenClaw 智能体</text>
 
-  <rect x="380" y="170" width="260" height="40" rx="8" fill="#1A2332" stroke="#D97706" stroke-width="1" stroke-opacity="0.3"/>
-  <text x="510" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#FCD34D">其他规划器 / 模型</text>
+  <rect x="380" y="170" width="260" height="40" rx="8" fill="#1A2332" stroke="#64748B" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="510" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#CBD5E1">其他规划器 / 模型</text>
 
   <!-- Arrow with label -->
   <line x1="360" y1="224" x2="360" y2="260" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
