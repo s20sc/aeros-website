@@ -201,20 +201,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="ros-layout">
         <div class="ros-diagram">
-          <div class="ros-layer ros-aeros">
-            <span>AEROS</span>
-            <span class="ros-tag">Agent Runtime + Governance</span>
-          </div>
-          <div class="ros-arrow">&darr; runs on top of &darr;</div>
-          <div class="ros-layer ros-ros2">
-            <span>ROS 2</span>
-            <span class="ros-tag">Communication Middleware</span>
-          </div>
-          <div class="ros-arrow">&darr; runs on top of &darr;</div>
-          <div class="ros-layer ros-os">
-            <span>Linux / RTOS</span>
-            <span class="ros-tag">Operating System</span>
-          </div>
+          <img id="arch-svg" src="/images/arch-en-dark.svg" alt="AEROS Architecture — How AEROS fits between agents and hardware" />
         </div>
 
         <div class="ros-text">
@@ -307,6 +294,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       document.getElementById('detail-' + btn.dataset.layer).classList.add('active');
     });
   });
+</script>
+
+<script is:inline>
+  function updateArchSvg() {
+    const img = document.getElementById('arch-svg');
+    if (!img) return;
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    img.src = '/images/arch-en-' + theme + '.svg';
+  }
+  updateArchSvg();
+  const observer = new MutationObserver(updateArchSvg);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 </script>
 
 <style>
@@ -472,10 +471,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     align-items: center;
   }
   .ros-diagram {
-    background: var(--bg-base);
-    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: var(--space-xl);
+    overflow: hidden;
+  }
+  .ros-diagram img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-lg);
   }
   .ros-layer {
     display: flex;

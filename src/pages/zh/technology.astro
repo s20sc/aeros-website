@@ -201,20 +201,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <div class="ros-layout">
         <div class="ros-diagram">
-          <div class="ros-layer ros-aeros">
-            <span>AEROS</span>
-            <span class="ros-tag">Agent 运行时 + 治理</span>
-          </div>
-          <div class="ros-arrow">&darr; 运行在其上 &darr;</div>
-          <div class="ros-layer ros-ros2">
-            <span>ROS 2</span>
-            <span class="ros-tag">通信中间件</span>
-          </div>
-          <div class="ros-arrow">&darr; 运行在其上 &darr;</div>
-          <div class="ros-layer ros-os">
-            <span>Linux / RTOS</span>
-            <span class="ros-tag">操作系统</span>
-          </div>
+          <img id="arch-svg" src="/images/arch-zh-dark.svg" alt="AEROS 架构 — AEROS 如何连接智能体与硬件" />
         </div>
 
         <div class="ros-text">
@@ -307,6 +294,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       document.getElementById('detail-' + btn.dataset.layer).classList.add('active');
     });
   });
+  function updateArchSvg() {
+    const img = document.getElementById('arch-svg');
+    if (!img) return;
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    img.src = '/images/arch-zh-' + theme + '.svg';
+  }
+  updateArchSvg();
+  const observer = new MutationObserver(updateArchSvg);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 </script>
 
 <style>
@@ -472,10 +468,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     align-items: center;
   }
   .ros-diagram {
-    background: var(--bg-base);
-    border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: var(--space-xl);
+    overflow: hidden;
+  }
+  .ros-diagram img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-lg);
   }
   .ros-layer {
     display: flex;
